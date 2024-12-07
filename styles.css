@@ -4,26 +4,22 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* Remove underline and change default hyperlink color */
-a {
-    color: #ff5733; /* Set your desired color, e.g., orange */
-    text-decoration: none; /* Remove underline */
-}
 
-/* Optional: Add hover effect */
-a:hover {
-    color: #3498db; /* Change color when hovered over, e.g., light blue */
-    text-decoration: underline; /* Optional: Add underline on hover */
-}
-
-/* Optional: Add focus effect (for accessibility) */
-a:focus {
-    outline: 2px dashed #ff5733; /* Add a dashed outline when focused */
-    outline-offset: 4px;
-}
 /* Basic body styling */
 body {
     font-family: 'Roboto', sans-serif;
+}
+
+/* Global hyperlink styling */
+a {
+    text-decoration: none; /* Remove underline */
+    color: #0066cc; /* Change default link color */
+    transition: color 0.3s ease; /* Smooth transition effect for color */
+}
+
+a:hover {
+    color: #FFD700; /* Gold color when hovered */
+    text-decoration: underline; /* Optional: Add underline on hover */
 }
 
 /* Navigation Bar Styling */
@@ -45,16 +41,14 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: white;
+    color: white; /* White color for navigation links */
     font-weight: bold;
     padding: 10px 20px; /* Add padding for clickable area */
 }
 
 nav ul li a:hover {
-    background-color: #575757; /* Hover effect */
-        color: #FFD700; /* Gold color for text on hover */
-
+    background-color: #575757; /* Hover effect for navigation links */
+    color: #FFD700; /* Gold color for navigation link text on hover */
 }
 
 /* Hero Section Styling */
@@ -67,14 +61,13 @@ nav ul li a:hover {
 
 .hero h1 {
     font-size: 36px;  /* Adjust font size */
-    color: #0066cc;     /* Dark text color */
+    color: #0066cc;   /* Dark text color */
 }
 
 .hero p {
     font-size: 18px;  /* Adjust font size */
     color: #666;      /* Light gray text color */
 }
-
 
 /* About Section Styling */
 #about {
