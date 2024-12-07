@@ -1,34 +1,42 @@
-/* Basic styling */
-body {
-    font-family: 'Roboto', sans-serif;
+/* Reset some default styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Basic body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navigation Bar Styling */
 header {
     background-color: #333;
     padding: 10px;
 }
 
-/* Remove default list styling and make the navigation horizontal */
 nav ul {
     list-style-type: none; /* Remove bullet points */
+    display: flex; /* Make the items appear horizontally */
+    justify-content: center; /* Center the navigation items */
     margin: 0;
     padding: 0;
-    text-align: center;
-    display: flex; /* Display list items in a horizontal line */
-    justify-content: center; /* Center the navigation links */
 }
 
 nav ul li {
-    margin-right: 20px; /* Space between each item */
+    margin-right: 20px; /* Space between links */
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
+    color: white;
     font-weight: bold;
+    padding: 10px 20px; /* Add padding for clickable area */
+}
+
+nav ul li a:hover {
+    background-color: #575757; /* Hover effect */
 }
 
 /* Hero Section Styling */
@@ -37,20 +45,9 @@ nav ul li a {
     color: white;
     text-align: center;
     padding: 50px 0;
-    background-size: cover;
-    background-position: center;
 }
 
-.hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.2em;
-}
-
-/* About Me Section Styling */
+/* About Section Styling */
 #about {
     background-color: #f9f9f9;
     padding: 20px;
@@ -74,12 +71,10 @@ nav ul li a {
     max-width: 600px;
 }
 
+/* Footer Styling */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
