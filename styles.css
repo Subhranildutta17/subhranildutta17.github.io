@@ -11,16 +11,18 @@ header {
     padding: 10px;
 }
 
+/* Remove default list styling and make the navigation horizontal */
 nav ul {
-    list-style-type: none;
+    list-style-type: none; /* Remove bullet points */
     margin: 0;
     padding: 0;
     text-align: center;
+    display: flex; /* Display list items in a horizontal line */
+    justify-content: center; /* Center the navigation links */
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin-right: 20px; /* Space between each item */
 }
 
 nav ul li a {
