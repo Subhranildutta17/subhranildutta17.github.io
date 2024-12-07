@@ -41,11 +41,22 @@ nav ul li a:hover {
 
 /* Hero Section Styling */
 .hero {
-    background-color: #0066cc;
-    color: white;
-    text-align: center;
-    padding: 50px 0;
+    background-color: transparent; /* Remove any background color */
+    background-image: none;        /* Remove any background image */
+    padding: 50px 0;               /* Adjust padding to your preference */
+    text-align: center;            /* Center the text */
 }
+
+.hero h1 {
+    font-size: 36px;  /* Adjust font size */
+    color: #333;      /* Dark text color */
+}
+
+.hero p {
+    font-size: 18px;  /* Adjust font size */
+    color: #666;      /* Light gray text color */
+}
+
 
 /* About Section Styling */
 #about {
