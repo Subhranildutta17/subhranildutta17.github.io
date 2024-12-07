@@ -30,7 +30,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #8B0000; /* Dark red color */
+    color: white;
     font-weight: bold;
     padding: 10px 20px; /* Add padding for clickable area */
 }
@@ -56,6 +56,7 @@ nav ul li a:hover {
     font-size: 18px;  /* Adjust font size */
     color: #666;      /* Light gray text color */
 }
+
 
 /* About Section Styling */
 #about {
