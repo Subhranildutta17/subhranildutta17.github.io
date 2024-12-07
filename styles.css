@@ -1,15 +1,87 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
-    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navigation Bar Styles */
+header nav ul {
+    list-style-type: none;        /* Removes bullet points */
+    display: flex;                /* Aligns items in a horizontal line */
+    justify-content: flex-end;    /* Aligns the items to the right side */
+    padding: 10px;
     margin: 0;
-    padding: 0;
 }
-h1 {
-    text-align: center;
-    color: #0066cc;
+
+header nav ul li {
+    margin-left: 20px;            /* Adds space between each link */
 }
-p {
+
+header nav ul li a {
+    color: white;                 /* White text color */
+    text-decoration: none;        /* Removes underline from links */
+    font-size: 18px;              /* Font size */
+    padding: 10px 20px;           /* Padding inside the links */
+}
+
+header nav ul li a:hover {
+    background-color: #ddd;      /* Background color on hover */
+    border-radius: 4px;          /* Rounded corners on hover */
+}
+
+/* Hero Section */
+.hero {
+    background-size: cover;
+    background-position: center;
     text-align: center;
-    font-size: 18px;
+    color: white;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+
+.hero .button {
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hero .button:hover {
+    background-color: #0057b8;
+}
+
+/* About Section */
+#about {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Services Section */
+#services {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
