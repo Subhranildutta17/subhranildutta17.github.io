@@ -18,7 +18,7 @@ a {
 }
 
 a:hover {
-    color: #FFD700; /* Gold color when hovered */
+    color: #0E94DC; /* skyblue color when hovered */
     text-decoration: underline; /* Optional: Add underline on hover */
 }
 
