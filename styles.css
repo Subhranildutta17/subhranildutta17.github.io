@@ -37,6 +37,8 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #575757; /* Hover effect */
+        color: #FFD700; /* Gold color for text on hover */
+
 }
 
 /* Hero Section Styling */
