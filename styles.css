@@ -1,33 +1,33 @@
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-}
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-}
-
-header nav ul {
-    list-style-type: none;
+/* About Me Section */
+#about {
+    padding: 50px;
+    background-color: #f9f9f9;
     text-align: center;
 }
 
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-header nav ul li a {
-    color: white;
-    text-decoration: none;
+.about-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #0066cc;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    margin-top: 40px;
+.about-text {
+    max-width: 600px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.about-text p {
+    margin: 10px 0;
 }
