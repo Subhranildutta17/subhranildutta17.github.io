@@ -61,10 +61,11 @@ nav ul li a:hover {
 }
 
 .about-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 200px;            /* Set width to 200px or any size you prefer */
+    height: 200px;           /* Set height to the same value to keep it square */
+    border-radius: 10px;     /* Optional: rounded corners */
+    object-fit: cover;       /* Ensures the image covers the area without distorting */
+    margin-right: 20px;      /* Space between the image and text */
 }
 
 .about-text {
