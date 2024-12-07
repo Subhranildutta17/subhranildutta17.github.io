@@ -1,31 +1,35 @@
 /* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 /* Navigation Bar Styles */
 header nav ul {
-    list-style-type: none;        /* Removes bullet points */
-    display: flex;                /* Aligns items in a horizontal line */
-    justify-content: flex-end;    /* Aligns the items to the right side */
-    padding: 10px;
-    margin: 0;
+    list-style-type: none;            /* Removes bullet points */
+    padding: 0;                       /* Removes default padding */
+    margin: 0;                        /* Removes default margin */
+    display: flex;                    /* Displays the list items in a row */
+    justify-content: flex-start;      /* Aligns items to the left side */
+    background-color: #333;           /* Background color for navigation bar */
 }
 
 header nav ul li {
-    margin-left: 20px;            /* Adds space between each link */
+    margin: 0 20px;                   /* Adds space between each link */
 }
 
 header nav ul li a {
-    color: white;                 /* White text color */
-    text-decoration: none;        /* Removes underline from links */
-    font-size: 18px;              /* Font size */
-    padding: 10px 20px;           /* Padding inside the links */
+    color: white;                     /* Text color */
+    text-decoration: none;            /* Removes underline from links */
+    font-size: 18px;                  /* Font size */
+    padding: 10px 20px;               /* Padding inside the link */
+    display: inline-block;            /* Ensures that padding works properly */
 }
 
 header nav ul li a:hover {
-    background-color: #ddd;      /* Background color on hover */
-    border-radius: 4px;          /* Rounded corners on hover */
+    background-color: #ddd;           /* Background color on hover */
+    border-radius: 4px;               /* Adds rounded corners on hover */
 }
 
 /* Hero Section */
