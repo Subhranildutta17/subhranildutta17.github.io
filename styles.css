@@ -4,7 +4,23 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Remove underline and change default hyperlink color */
+a {
+    color: #ff5733; /* Set your desired color, e.g., orange */
+    text-decoration: none; /* Remove underline */
+}
 
+/* Optional: Add hover effect */
+a:hover {
+    color: #3498db; /* Change color when hovered over, e.g., light blue */
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+/* Optional: Add focus effect (for accessibility) */
+a:focus {
+    outline: 2px dashed #ff5733; /* Add a dashed outline when focused */
+    outline-offset: 4px;
+}
 /* Basic body styling */
 body {
     font-family: 'Roboto', sans-serif;
