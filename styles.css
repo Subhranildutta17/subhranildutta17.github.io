@@ -13,7 +13,7 @@ body {
 /* Global hyperlink styling */
 a {
     text-decoration: none; /* Remove underline */
-    color: #B03E45; /* Change default link color */
+    color: #800080; /* Change default link color */
     transition: color 0.3s ease; /* Smooth transition effect for color */
 }
 
