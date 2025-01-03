@@ -33,6 +33,38 @@
             font-size: 0.9em;
             line-height: 1.4em;
         }
+
+        /* Styles for the running news ticker */
+        #news-ticker {
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            margin-top: 20px;
+            overflow: hidden;
+            position: relative;
+            height: 50px;
+        }
+        #news-ticker .news-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scroll-left 15s linear infinite;
+        }
+        @keyframes scroll-left {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+        #news-ticker a {
+            color: #0077cc;
+            text-decoration: none;
+        }
+        #news-ticker a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -67,7 +99,7 @@
                 <h3><strong>Subhranil Dutta </strong></h3>
                 <p><strong>Post-Doctoral Fellow</strong> </p>
                 <p><strong>Office: Room B64 - 310, Institute of Computer Science, University of St. Gallen, Torstrasse 25, 9000 St. Gallen, Switzerland</strong></p>
-                <p>I am currently serving as a Post-Doctoral Fellow in the <a href="https://ics.unisg.ch">Institute of Computer Science</a> at the <a href="https://www.unisg.ch/de/">University of St Gallen</a>, Switzerland, under the guidance of <a href="https://www.unisg.ch/en/university/about-us/organisation/detail/person-id/2e889d58-6b54-431b-ae0e-3198ed46444a/">Professor Katerina Mitrokotsa</a> with the <a href="https://www.sbfi.admin.ch/sbfi/en/home/education/scholarships-and-grants/swiss-government-excellence-scholarships.html">Swiss Government Excellence Scholarship (ESKAS)</a>. Prior to this, I held the position of Research Assistant in the <a href="https://ics.unisg.ch">Institute of Computer Science</a> at <a href="https://www.unisg.ch/de/">University of St Gallen</a>, Switzerland. My academic journey includes completing my doctoral research as a senior research scholar in the <a href="https://www.iitkgp.ac.in/department/MA">Department of Mathematics</a> at <a href="https://www.iitkgp.ac.in">Indian Institute of Technology Kharagpur</a>, India where I defended my thesis under the supervision of <a href="http://www.facweb.iitkgp.ac.in/~sourav/">Professor Sourav Mukhopadhyay</a>. My academic foundation includes a B.Sc. from <a href="https://maldacollege.ac.in/home.php">Malda College</a>, <a href="https://www.ugb.ac.in">University of Gour Banga</a>, and an M.Sc. in Pure Mathematics from the <a href="https://www.ugb.ac.in">University of Gour Banga</a>.</p>
+                <p>I am currently serving as a Post-Doctoral Fellow in the <a href="https://ics.unisg.ch">Institute of Computer Science</a> at the <a href="https://www.unisg.ch/de/">University of St Gallen</a>, Switzerland...</p>
             </div>
 
             <!-- Sidebar: Research Profile and Contact Address -->
@@ -93,16 +125,15 @@
         </div>
     </section>
 
-    <!-- Latest News Section -->
-    <section id="latest-news">
-        <h2>Latest News</h2>
-        <ul>
-            <li><strong>September 2024:</strong> Awarded the <a href="https://www.sbfi.admin.ch/sbfi/en/home/education/scholarships-and-grants/swiss-government-excellence-scholarships.html">Swiss Government Excellence Post Doctoral Scholarships (ESKAS)</a> at the University of St Gallen.</li>
-            <li><strong>July 2024:</strong> Awarded Doctor of Philosophy (PhD) on Cryptography from Department of Mathematics, IIT Kharagpur, India. </li>
-            <li><strong>July 2024:</strong> Published a new research paper titled <a href="https://ieeexplore.ieee.org/document/10629019">SACfe: Secure Access Control in Functional Encryption with Unbounded Data</a> at the <a href="https://eurosp2024.ieee-security.org">EUROS&P 2024</a>.</li>
-            <li><strong>March 2024:</strong> Published a new research paper titled <a href="https://doi.org/10.1016/j.tcs.2024.114502">Reinforcing Privacy in Cloud Computing via Adaptively Secure Non-zero Inner Product Encryption and Anonymous Identity-Based Revocation in Unbounded Setting</a> in the journal <a href="https://www.sciencedirect.com/journal/theoretical-computer-science">Theoretical Computer Science</a>.</li>
-        </ul>
-    </section>
+    <!-- Latest News Running Section -->
+    <div id="news-ticker">
+        <div class="news-content">
+            <span><strong>September 2024:</strong> Awarded the <a href="https://www.sbfi.admin.ch/sbfi/en/home/education/scholarships-and-grants/swiss-government-excellence-scholarships.html">Swiss Government Excellence Post Doctoral Scholarships (ESKAS)</a> at the University of St Gallen. </span>
+            <span><strong>July 2024:</strong> Awarded Doctor of Philosophy (PhD) on Cryptography from Department of Mathematics, IIT Kharagpur, India. </span>
+            <span><strong>July 2024:</strong> Published a new research paper titled <a href="https://ieeexplore.ieee.org/document/10629019">SACfe: Secure Access Control in Functional Encryption with Unbounded Data</a> at the <a href="https://eurosp2024.ieee-security.org">EUROS&P 2024</a>. </span>
+            <span><strong>March 2024:</strong> Published a new research paper titled <a href="https://doi.org/10.1016/j.tcs.2024.114502">Reinforcing Privacy in Cloud Computing via Adaptively Secure Non-zero Inner Product Encryption...</a> in the journal <a href="https://www.sciencedirect.com/journal/theoretical-computer-science">Theoretical Computer Science</a>. </span>
+        </div>
+    </div>
 
     <!-- Research Interests Section -->
     <section id="research-interests">
