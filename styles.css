@@ -100,28 +100,7 @@ nav ul li a:hover {
     margin: 20px 0;
 }
 
-<style>
-    .horizontal-list {
-        display: flex; /* Use flexbox for horizontal layout */
-        list-style: none; /* Remove default bullet points */
-        padding: 0;
-        margin: 0;
-        gap: 15px; /* Adjust spacing between items */
-    }
 
-    .horizontal-list li {
-        margin: 0; /* Ensure no extra margin */
-    }
-
-    .horizontal-list a {
-        text-decoration: none; /* Optional: remove underline from links */
-        color: #007BFF; /* Optional: customize link color */
-    }
-
-    .horizontal-list a:hover {
-        text-decoration: underline; /* Optional: underline on hover */
-    }
-</style>
 
 
 #latest-news ul {
