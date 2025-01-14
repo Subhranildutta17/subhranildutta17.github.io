@@ -89,6 +89,7 @@ nav ul li a:hover {
     object-fit: cover;       /* Ensures the image covers the area without distorting */
     margin-right: 20px;      /* Space between the image and text */
 }
+<h3 style="margin-bottom: 1cm;"><strong>Subhranil Dutta </strong></h3>
 
 .about-text {
     max-width: 600px;
