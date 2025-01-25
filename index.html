@@ -3,23 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subhranil Dutta - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Subhranil Dutta - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            background-color: #f7f7f7;
+            line-height: 1.6;
             color: #333;
-            line-height: 1.8;
         }
 
         a {
-            color: #0078ff;
+            color: #0078e7;
             text-decoration: none;
-            font-weight: 600;
         }
 
         a:hover {
@@ -28,10 +27,9 @@
 
         /* Header */
         header {
-            background: linear-gradient(90deg, #003566, #0078ff);
+            background: #003366;
             color: white;
             padding: 1.5rem 0;
-            text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
@@ -46,27 +44,24 @@
 
         nav a {
             color: white;
+            font-weight: 700;
             font-size: 1rem;
-            text-transform: uppercase;
         }
 
         nav a:hover {
-            border-bottom: 2px solid white;
+            color: #ffcc00;
         }
 
         /* Hero Section */
         .hero {
-            background: #0078ff;
+            background: #005792;
             color: white;
             text-align: center;
-            padding: 4rem 1rem;
-            margin-bottom: 2rem;
-            border-radius: 0 0 50px 50px;
+            padding: 3rem 1rem;
         }
 
         .hero h1 {
-            font-size: 3rem;
-            font-weight: bold;
+            font-size: 2.8rem;
             margin-bottom: 1rem;
         }
 
@@ -76,54 +71,49 @@
 
         /* About Section */
         section {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 1rem;
+            padding: 2rem 1rem;
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
         h2 {
-            text-align: center;
-            font-size: 2rem;
-            color: #003566;
-            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            color: #003366;
+            border-bottom: 3px solid #0078e7;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
         }
 
         .about-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: flex;
             gap: 2rem;
+            flex-wrap: wrap;
         }
 
-        .about-container img {
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        .about-text {
+            flex: 2;
+            min-width: 60%;
         }
 
-        .about-text h3 {
-            font-size: 1.5rem;
-            color: #003566;
-            margin-bottom: 0.5rem;
+        .about-text img {
+            width: 180px;
+            border-radius: 8px;
+            margin-bottom: 1rem;
         }
 
-        .about-text p {
-            font-size: 1rem;
-            color: #555;
-        }
-
-        /* Sidebar */
         .sidebar {
-            background: #ffffff;
+            flex: 1;
+            background-color: #ffffff;
             padding: 1.5rem;
-            border-radius: 12px;
+            border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .sidebar h3 {
-            font-size: 1.3rem;
-            color: #003566;
+            font-size: 1.5rem;
+            color: #003366;
             margin-bottom: 1rem;
-            border-bottom: 2px solid #0078ff;
+            border-bottom: 2px solid #0078e7;
             padding-bottom: 0.5rem;
         }
 
@@ -134,43 +124,60 @@
         }
 
         .sidebar ul li {
-            margin: 0.5rem 0;
+            margin-bottom: 0.7rem;
         }
 
-        /* News Section */
-        .news-card {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        .sidebar ul li a {
+            color: #0078e7;
         }
 
-        .news-card ul {
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Latest News Section */
+        .latest-news-container {
+            margin-top: 2rem;
+            position: relative;
+            height: 180px;
+            overflow: hidden;
+            background: #e5f3ff;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .scrolling-news {
+            position: absolute;
+            animation: scrollNews 15s linear infinite;
             list-style: none;
             padding: 0;
             margin: 0;
         }
 
-        .news-card ul li {
-            margin: 0.5rem 0;
+        .scrolling-news li {
+            font-size: 1rem;
+            color: #003366;
+            margin: 0.7rem 0;
+        }
+
+        @keyframes scrollNews {
+            0% { transform: translateY(100%); }
+            100% { transform: translateY(-100%); }
         }
 
         /* Footer */
         footer {
             text-align: center;
-            background: #003566;
+            background: #003366;
             color: white;
             padding: 1.5rem 0;
-        }
-
-        footer p {
-            margin: 0;
+            margin-top: 3rem;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Navigation Bar -->
     <header>
         <nav>
             <ul>
@@ -184,44 +191,49 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Welcome to My Portfolio</h1>
-        <p>"It is very simple to be happy, but it is very difficult to be simple!"</p>
+        <h1>Welcome to My Personal Website</h1>
+        <p>It is very simple to be happy, but it is very difficult to be simple!</p>
         <p>- Rabindranath Tagore</p>
     </section>
 
-    <!-- About Section -->
-    <section>
+    <!-- About Me Section -->
+    <section id="about">
         <h2>About Me</h2>
         <div class="about-container">
+            <!-- Picture and Biography -->
             <div class="about-text">
-                <h3>Subhranil Dutta</h3>
-                <p>I am currently serving as a Post-Doctoral Fellow in the <a href="https://ics.unisg.ch">Institute of Computer Science</a> at the <a href="https://www.unisg.ch/de/">University of St. Gallen</a>, Switzerland. My research focuses on functional encryption, lattice-based cryptography, and secure cloud computing.</p>
+                <img src="your-picture.jpg" alt="Subhranil Dutta">
+                <h3><strong>Subhranil Dutta</strong></h3>
+                <p>I am currently serving as a Post-Doctoral Fellow in the <a href="https://ics.unisg.ch">Institute of Computer Science</a> at the <a href="https://www.unisg.ch/de/">University of St Gallen</a>, Switzerland, under the guidance of <a href="https://www.unisg.ch/en/university/about-us/organisation/detail/person-id/2e889d58-6b54-431b-ae0e-3198ed46444a/">Professor Katerina Mitrokotsa</a> with the <a href="https://www.sbfi.admin.ch/sbfi/en/home/education/scholarships-and-grants/swiss-government-excellence-scholarships.html">Swiss Government Excellence Scholarship (ESKAS)</a>. Prior to this, I held the position of Research Assistant in the <a href="https://ics.unisg.ch">Institute of Computer Science</a> at <a href="https://www.unisg.ch/de/">University of St Gallen</a>, Switzerland. My academic journey includes completing my doctoral research as a senior research scholar in the <a href="https://www.iitkgp.ac.in/department/MA">Department of Mathematics</a> at <a href="https://www.iitkgp.ac.in">Indian Institute of Technology Kharagpur</a>, India where I defended my thesis under the supervision of <a href="http://www.facweb.iitkgp.ac.in/~sourav/">Professor Sourav Mukhopadhyay</a>. My academic foundation includes a B.Sc. from <a href="https://maldacollege.ac.in/home.php">Malda College</a>, <a href="https://www.ugb.ac.in">University of Gour Banga</a>, and an M.Sc. in Pure Mathematics from the <a href="https://www.ugb.ac.in">University of Gour Banga</a>.</p>
             </div>
-            <img src="your-picture.jpg" alt="Subhranil Dutta">
-        </div>
-    </section>
 
-    <!-- Research Interests -->
-    <section>
-        <div class="sidebar">
-            <h3>Research Interests</h3>
-            <ul>
-                <li>Functional Encryption</li>
-                <li>Lattice-based Cryptography</li>
-                <li>Secure Cloud Computing</li>
-            </ul>
-        </div>
-    </section>
+            <!-- Sidebar: Research Profile and Contact -->
+            <div class="sidebar">
+                <h3>Research Interests</h3>
+                <ul>
+                    <li>Functional Encryption and its Applications</li>
+                    <li>Lattice-based Cryptography</li>
+                    <li>Secure Cloud Computing</li>
+                </ul>
+                <h3>Research Profile</h3>
+                <ul style="list-style: none; display: flex; gap: 10px; padding: 0; margin: 0;">
+                    <li><a href="https://scholar.google.com/citations?user=D_iMmsQAAAAJ&hl=en">Google Scholar</a></li>
+                    <li><a href="https://dblp.org/pid/305/4367.html">DBLP</a></li>
+                </ul>
 
-    <!-- Latest News -->
-    <section>
-        <h2>Latest News</h2>
-        <div class="news-card">
-            <ul>
-                <li><strong>September 2024:</strong> Awarded the Swiss Government Excellence Post Doctoral Scholarships.</li>
-                <li><strong>July 2024:</strong> Published a paper at EUROS&P 2024.</li>
-                <li><strong>March 2024:</strong> Published a paper in Theoretical Computer Science.</li>
-            </ul>
+                <!-- Latest News Section -->
+                <div class="latest-news-container">
+                    <h3>Latest News</h3>
+                    <ul class="scrolling-news">
+                        <li><strong>September 2024:</strong> Awarded the <a href="https://www.sbfi.admin.ch/sbfi/en/home/education/scholarships-and-grants/swiss-government-excellence-scholarships.html">Swiss Government Excellence Post Doctoral Scholarships (ESKAS)</a> at the University of St Gallen.</li>
+                        <li><strong>July 2024:</strong> Awarded Doctor of Philosophy (PhD) on Cryptography from Department of Mathematics, IIT Kharagpur, India.</li>
+                        <li><strong>July 2024:</strong> Published a new research paper titled <a href="https://ieeexplore.ieee.org/document/10629019">SACfe: Secure Access Control in Functional Encryption with Unbounded Data</a> at the <a href="https://eurosp2024.ieee-security.org">EUROS&P 2024</a>.</li>
+                        <li><strong>March 2024:</strong> Published a new research paper titled <a href="https://doi.org/10.1016/j.tcs.2024.114502">Reinforcing Privacy in Cloud Computing via Adaptively Secure Non-zero Inner Product Encryption and Anonymous Identity-Based Revocation in Unbounded Setting</a> in the journal <a href="https://www.sciencedirect.com/journal/theoretical-computer-science">Theoretical Computer Science</a>.</li>
+                    </ul>
+                </div>
+                <h3>Contact Address</h3>
+                <p><strong>Subhranil Dutta</strong><br> Post-Doctoral Fellow<br> Room B64 - 310, Torstrasse 25, 9000 St. Gallen, Switzerland<br> Email: firstname[dot]lastname[at]unisg[dot]ch<br> Mobile: (+91) 8250692230 / (+41) 772027150</p>
+            </div>
         </div>
     </section>
 
@@ -229,6 +241,5 @@
     <footer>
         <p>© 2024 Subhranil Dutta | All Rights Reserved</p>
     </footer>
-
 </body>
 </html>
