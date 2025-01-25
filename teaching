@@ -1,1 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subhranil Dutta - Teaching</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Common styles from your previous page */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            line-height: 1.4;
+            color: #333;
+        }
+
+        a {
+            color: #0078e7;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            background: #003366;
+            color: white;
+            padding: 0.6rem 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 1rem 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 {
+            font-size: 1.6rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .hero p {
+            font-size: 0.8rem;
+        }
+
+        section {
+            padding: 1rem;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #003366;
+            border-bottom: 1px solid #0078e7;
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.2rem;
+        }
+
+        .about-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .about-text {
+            flex: 2;
+            min-width: 45%;
+            font-size: 0.9rem;
+        }
+
+        .about-text img {
+            width: 120px;
+            border-radius: 8px;
+            margin-bottom: 0.6rem;
+        }
+
+        .sidebar {
+            flex: 1;
+            background-color: #fff;
+            padding: 0.8rem;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 0.85rem;
+        }
+
+        .sidebar h3 {
+            font-size: 1rem;
+            color: #003366;
+            margin-bottom: 0.6rem;
+            border-bottom: 2px solid #0078e7;
+            padding-bottom: 0.2rem;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 0.3rem;
+        }
+
+        .sidebar ul li a {
+            color: #0078e7;
+        }
+
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            background: #003366;
+            color: white;
+            padding: 0.6rem 1rem;
+            margin-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="academic_qualification.html">Academic Qualification</a></li>
+                <li><a href="awards.html">Awards</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="teaching.html">Teaching</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to My Teaching Page</h1>
+        <p>Sharing knowledge and helping students grow is a core part of my academic journey.</p>
+    </section>
+
+    <!-- Teaching Section -->
+    <section id="teaching">
+        <h2>Teaching Experience</h2>
+        <div class="about-container">
+            <!-- Teaching Description -->
+            <div class="about-text">
+                <h3><strong>Subhranil Dutta</strong></h3>
+                <p>I have had the privilege to teach various subjects related to computer science and mathematics, ranging from introductory to advanced courses. Below is a summary of my teaching experience:</p>
+
+                <h4>Courses Taught:</h4>
+                <ul>
+                    <li>Introduction to Cryptography</li>
+                    <li>Advanced Cryptographic Protocols</li>
+                    <li>Mathematics for Computer Science</li>
+                    <li>Cloud Computing and Security</li>
+                </ul>
+
+                <h4>Teaching Philosophy:</h4>
+                <p>My teaching philosophy centers on the idea that students should not only learn theoretical concepts but also apply them to real-world challenges. I believe in fostering an interactive and engaging learning environment where students are encouraged to explore, question, and innovate.</p>
+            </div>
+
+            <!-- Sidebar: Contact and Feedback -->
+            <div class="sidebar">
+                <h3>Contact Information</h3>
+                <p>Feel free to reach out for any inquiries regarding the courses or teaching materials:</p>
+                <ul>
+                    <li>Email: <a href="mailto:firstname[dot]lastname[at]unisg[dot]ch">firstname[dot]lastname[at]unisg[dot]ch</a></li>
+                    <li>Mobile: (+41) 772027150</li>
+                </ul>
+
+                <h3>Student Feedback</h3>
+                <p>Here are some of the feedback I received from my students:</p>
+                <ul>
+                    <li>"Great explanations and easy to follow!"</li>
+                    <li>"The course material was comprehensive, and the examples were highly practical."</li>
+                    <li>"A great balance between theory and application. Highly recommended!"</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Subhranil Dutta. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
 
