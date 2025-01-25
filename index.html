@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subhranil Dutta - Personal Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Subhranil Dutta - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fc;
+            background-color: #f5f5f5;
             color: #333;
-            line-height: 1.6;
+            line-height: 1.8;
         }
 
         a {
-            color: #007BFF;
+            color: #0078ff;
             text-decoration: none;
+            font-weight: 600;
         }
 
         a:hover {
@@ -27,10 +28,11 @@
 
         /* Header */
         header {
-            background-color: #003566;
+            background: linear-gradient(90deg, #003566, #0078ff);
             color: white;
             padding: 1.5rem 0;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         nav ul {
@@ -44,105 +46,125 @@
 
         nav a {
             color: white;
-            font-weight: 600;
+            font-size: 1rem;
             text-transform: uppercase;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            border-bottom: 2px solid white;
         }
 
         /* Hero Section */
         .hero {
-            background-color: #00a6fb;
+            background: #0078ff;
             color: white;
             text-align: center;
-            padding: 3rem 1rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 4rem 1rem;
+            margin-bottom: 2rem;
+            border-radius: 0 0 50px 50px;
         }
 
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
+            font-weight: bold;
             margin-bottom: 1rem;
         }
 
         .hero p {
             font-size: 1.2rem;
-            margin-bottom: 0.5rem;
         }
 
-        /* Section Styling */
+        /* About Section */
         section {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 2rem auto;
-            padding: 1.5rem;
+            padding: 1rem;
         }
 
         h2 {
+            text-align: center;
             font-size: 2rem;
             color: #003566;
             margin-bottom: 1rem;
-            text-align: center;
         }
 
-        .content-container {
-            display: flex;
-            flex-wrap: wrap;
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 2rem;
         }
 
-        .card {
-            background: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            padding: 1.5rem;
-            flex: 1;
-            min-width: 280px;
+        .about-container img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .card img {
-            width: 100px;
-            border-radius: 50%;
-            margin-bottom: 1rem;
-        }
-
-        .card h3 {
+        .about-text h3 {
             font-size: 1.5rem;
-            margin-bottom: 0.5rem;
             color: #003566;
+            margin-bottom: 0.5rem;
         }
 
-        .card p {
-            margin-bottom: 1rem;
+        .about-text p {
+            font-size: 1rem;
+            color: #555;
         }
 
+        /* Sidebar */
         .sidebar {
-            max-width: 300px;
-            margin: auto;
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .list-group {
+        .sidebar h3 {
+            font-size: 1.3rem;
+            color: #003566;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #0078ff;
+            padding-bottom: 0.5rem;
+        }
+
+        .sidebar ul {
             list-style: none;
             padding: 0;
             margin: 0;
         }
 
-        .list-group li {
+        .sidebar ul li {
+            margin: 0.5rem 0;
+        }
+
+        /* News Section */
+        .news-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .news-card ul li {
             margin: 0.5rem 0;
         }
 
         /* Footer */
         footer {
-            background-color: #003566;
-            color: white;
             text-align: center;
+            background: #003566;
+            color: white;
             padding: 1.5rem 0;
-            margin-top: 2rem;
         }
 
         footer p {
             margin: 0;
-            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -162,7 +184,7 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Welcome to My Personal Website</h1>
+        <h1>Welcome to My Portfolio</h1>
         <p>"It is very simple to be happy, but it is very difficult to be simple!"</p>
         <p>- Rabindranath Tagore</p>
     </section>
@@ -170,43 +192,36 @@
     <!-- About Section -->
     <section>
         <h2>About Me</h2>
-        <div class="content-container">
-            <!-- Profile Card -->
-            <div class="card">
-                <img src="your-picture.jpg" alt="Subhranil Dutta">
+        <div class="about-container">
+            <div class="about-text">
                 <h3>Subhranil Dutta</h3>
-                <p>I am currently serving as a Post-Doctoral Fellow in the <a href="https://ics.unisg.ch">Institute of Computer Science</a> at the <a href="https://www.unisg.ch/de/">University of St. Gallen</a>, Switzerland, under the guidance of <a href="https://www.unisg.ch/en/university/about-us/organisation/detail/person-id/2e889d58-6b54-431b-ae0e-3198ed46444a/">Professor Katerina Mitrokotsa</a>. My research interests include functional encryption, lattice-based cryptography, and secure cloud computing.</p>
+                <p>I am currently serving as a Post-Doctoral Fellow in the <a href="https://ics.unisg.ch">Institute of Computer Science</a> at the <a href="https://www.unisg.ch/de/">University of St. Gallen</a>, Switzerland. My research focuses on functional encryption, lattice-based cryptography, and secure cloud computing.</p>
             </div>
-
-            <!-- Sidebar Card -->
-            <div class="card sidebar">
-                <h3>Research Interests</h3>
-                <ul class="list-group">
-                    <li>Functional Encryption</li>
-                    <li>Lattice-based Cryptography</li>
-                    <li>Secure Cloud Computing</li>
-                </ul>
-                <h3>Research Profiles</h3>
-                <ul class="list-group">
-                    <li><a href="https://scholar.google.com/citations?user=D_iMmsQAAAAJ&hl=en">Google Scholar</a></li>
-                    <li><a href="https://dblp.org/pid/305/4367.html">DBLP</a></li>
-                </ul>
-            </div>
+            <img src="your-picture.jpg" alt="Subhranil Dutta">
         </div>
     </section>
 
-    <!-- News Section -->
+    <!-- Research Interests -->
+    <section>
+        <div class="sidebar">
+            <h3>Research Interests</h3>
+            <ul>
+                <li>Functional Encryption</li>
+                <li>Lattice-based Cryptography</li>
+                <li>Secure Cloud Computing</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Latest News -->
     <section>
         <h2>Latest News</h2>
-        <div class="content-container">
-            <div class="card">
-                <h3>Recent Highlights</h3>
-                <ul>
-                    <li><strong>September 2024:</strong> Awarded the Swiss Government Excellence Post Doctoral Scholarships.</li>
-                    <li><strong>July 2024:</strong> Published a research paper in EUROS&P 2024.</li>
-                    <li><strong>March 2024:</strong> Published a paper in Theoretical Computer Science.</li>
-                </ul>
-            </div>
+        <div class="news-card">
+            <ul>
+                <li><strong>September 2024:</strong> Awarded the Swiss Government Excellence Post Doctoral Scholarships.</li>
+                <li><strong>July 2024:</strong> Published a paper at EUROS&P 2024.</li>
+                <li><strong>March 2024:</strong> Published a paper in Theoretical Computer Science.</li>
+            </ul>
         </div>
     </section>
 
