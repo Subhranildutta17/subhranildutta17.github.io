@@ -140,6 +140,7 @@
             padding: 0.6rem 1rem;
             margin-top: 1.5rem;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -149,22 +150,31 @@
             border-radius: 7px;
             overflow: hidden;
         }
+
         th, td {
             border: 1px solid #ddd;
             padding: 10px;
             text-align: left;
         }
+
         th {
             background-color: #003366;
             color: white;
             font-weight: bold;
         }
+
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
+
         tr:hover {
             background-color: #e0e0e0;
             transition: 0.3s;
+        }
+
+        /* New CSS to make the Course column text lowercase */
+        td:first-child {
+            text-transform: lowercase;
         }
     </style>
 </head>
