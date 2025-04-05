@@ -152,19 +152,24 @@
         .horizontal-list {
             display: flex;
             gap: 40px;
-            list-style: none;
             padding: 0;
             margin: 0 0 1em 0;
             flex-wrap: wrap;
         }
 
         .horizontal-list > li {
+            list-style: none; /* Removes bullet from top-level items */
             flex: 1 1 auto;
         }
 
         .horizontal-list ul {
             list-style: disc;
             margin-left: 20px;
+            padding-left: 0;
+        }
+
+        .horizontal-list ul li {
+            list-style: disc;
         }
     </style>
     <ul class="horizontal-list">
@@ -191,6 +196,7 @@
         </li>
     </ul>
 </section>
+
 
 
     <!-- Footer -->
