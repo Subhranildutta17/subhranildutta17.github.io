@@ -146,32 +146,31 @@
     </section>
 
     <!-- Professional Activities Section -->
-    <section id="professional-activities">
+  <section id="professional-activities">
     <h2>Professional Activities</h2>
     <style>
+        /* Remove bullets from outer list */
         .horizontal-list {
             display: flex;
             gap: 40px;
-            padding: 0;
+            padding-left: 0;
             margin: 0 0 1em 0;
             flex-wrap: wrap;
         }
 
         .horizontal-list > li {
-            list-style: none; /* Removes bullet from top-level items */
+            list-style-type: none; /* Removes the extra bullet */
             flex: 1 1 auto;
         }
 
+        /* Style inner list normally */
         .horizontal-list ul {
-            list-style: disc;
+            list-style-type: disc;
             margin-left: 20px;
-            padding-left: 0;
-        }
-
-        .horizontal-list ul li {
-            list-style: disc;
+            padding-left: 20px;
         }
     </style>
+
     <ul class="horizontal-list">
         <li>
             <strong>Reviewer for Journals:</strong>
@@ -196,6 +195,7 @@
         </li>
     </ul>
 </section>
+
 
 
 
