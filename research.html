@@ -151,30 +151,34 @@
   <style>
     .professional-container {
       display: flex;
-      gap: 40px;
       flex-wrap: wrap;
+      gap: 60px;
     }
 
     .activity-block {
       flex: 1 1 300px;
     }
 
-    .activity-block p {
+    .activity-block-title {
       font-weight: bold;
       margin-bottom: 0.5em;
     }
 
-    .activity-block ul {
-      list-style-type: disc;
+    .activity-list {
+      list-style: disc;
       padding-left: 20px;
       margin-top: 0;
+    }
+
+    .activity-list li {
+      list-style-position: outside;
     }
   </style>
 
   <div class="professional-container">
     <div class="activity-block">
-      <p>Reviewer for Journals:</p>
-      <ul>
+      <div class="activity-block-title">Reviewer for Journals:</div>
+      <ul class="activity-list">
         <li>Designs, Codes and Cryptography</li>
         <li>IEEE Transactions on Information Forensics and Security</li>
         <li>IEEE Transactions on Dependable and Secure Computing</li>
@@ -184,9 +188,10 @@
         <li>Tsinghua Science and Technology</li>
       </ul>
     </div>
+
     <div class="activity-block">
-      <p>Reviewer/PC/Sub-reviewer for Conferences:</p>
-      <ul>
+      <div class="activity-block-title">Reviewer/PC/Sub-reviewer for Conferences:</div>
+      <ul class="activity-list">
         <li>ICSP 2020</li>
         <li>Indocrypt 2021</li>
         <li>Indocrypt 2024</li>
@@ -195,6 +200,7 @@
     </div>
   </div>
 </section>
+
 
 
 
