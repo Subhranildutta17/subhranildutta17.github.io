@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Subhranil Dutta - Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f7f7f7;
-            line-height: 1.4;
+            line-height: 1.5;
             color: #333;
         }
 
@@ -24,45 +24,56 @@
             text-decoration: underline;
         }
 
+        /* ===== Header Styling ===== */
         header {
-            background: #003366;
+            background: linear-gradient(90deg, #003366, #004080);
             color: white;
-            padding: 0.6rem 1rem;
+            padding: 1rem 2rem;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            justify-content: center;
-            gap: 1rem;
+            gap: 1.2rem;
             padding: 0;
             margin: 0;
         }
 
         nav a {
             color: white;
-            font-weight: 700;
-            font-size: 1rem;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
         }
 
         nav a:hover {
             color: #ffcc00;
         }
 
+        /* ===== Hero Section ===== */
         .hero {
             text-align: center;
-            padding: 1rem 1rem;
-            margin-bottom: 1rem;
+            padding: 2rem 1rem 1rem;
         }
 
         .hero h1 {
-            font-size: 1.6rem;
-            margin-bottom: 0.3rem;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
         }
 
         .hero p {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
+            color: #666;
         }
 
         section {
@@ -88,7 +99,7 @@
         .about-text {
             flex: 2;
             min-width: 45%;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
         }
 
         .about-text img {
@@ -121,7 +132,7 @@
         }
 
         .sidebar ul li {
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.4rem;
         }
 
         .sidebar ul li a {
@@ -168,12 +179,27 @@
             padding: 0.6rem 1rem;
             margin-top: 1.5rem;
         }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+                margin-top: 0.8rem;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- Header -->
     <header>
+        <div class="logo">Subhranil Dutta</div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -181,30 +207,27 @@
                 <li><a href="awards.html">Awards</a></li>
                 <li><a href="research.html">Research</a></li>
                 <li><a href="teaching.html">Teaching</a></li>
-
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero">
         <h1>Welcome to My Personal Website</h1>
         <p>It is very simple to be happy, but it is very difficult to be simple!</p>
         <p>- Rabindranath Tagore</p>
     </section>
 
-    <!-- About Me Section -->
+    <!-- About -->
     <section id="about">
         <h2>About Me</h2>
         <div class="about-container">
-            <!-- Picture and Biography -->
             <div class="about-text">
                 <img src="your-picture.jpg" alt="Subhranil Dutta">
                 <h3><strong>Subhranil Dutta</strong></h3>
-                <p>I am currently serving as a Post-Doctoral Fellow in the <a href="https://ics.unisg.ch">Institute of Computer Science</a> at the <a href="https://www.unisg.ch/de/">University of St Gallen</a>, Switzerland, under the guidance of <a href="https://www.unisg.ch/en/university/about-us/organisation/detail/person-id/2e889d58-6b54-431b-ae0e-3198ed46444a/">Professor Katerina Mitrokotsa</a> with the <a href="https://www.sbfi.admin.ch/sbfi/en/home/education/scholarships-and-grants/swiss-government-excellence-scholarships.html">Swiss Government Excellence Scholarship (ESKAS)</a>. Prior to this, I held the position of Research Assistant in the <a href="https://ics.unisg.ch">Institute of Computer Science</a> at <a href="https://www.unisg.ch/de/">University of St Gallen</a>, Switzerland. My academic journey includes completing my doctoral research as a senior research scholar in the <a href="https://www.iitkgp.ac.in/department/MA">Department of Mathematics</a> at <a href="https://www.iitkgp.ac.in">Indian Institute of Technology Kharagpur</a>, India where I defended my thesis under the supervision of <a href="http://www.facweb.iitkgp.ac.in/~sourav/">Professor Sourav Mukhopadhyay</a>. My academic foundation includes a B.Sc. from <a href="https://maldacollege.ac.in/home.php">Malda College</a>, <a href="https://www.ugb.ac.in">University of Gour Banga</a>, and an M.Sc. in Pure Mathematics from the <a href="https://www.ugb.ac.in">University of Gour Banga</a>.</p>
+                <p>I am currently serving as a Post-Doctoral Fellow in the <a href="https://ics.unisg.ch">Institute of Computer Science</a> at the <a href="https://www.unisg.ch/de/">University of St Gallen</a>, Switzerland, under the guidance of <a href="https://www.unisg.ch/en/university/about-us/organisation/detail/person-id/2e889d58-6b54-431b-ae0e-3198ed46444a/">Professor Katerina Mitrokotsa</a> with the <a href="https://www.sbfi.admin.ch/sbfi/en/home/education/scholarships-and-grants/swiss-government-excellence-scholarships.html">Swiss Government Excellence Scholarship (ESKAS)</a>. Prior to this, I held the position of Research Assistant in the same institute. My academic journey includes a PhD from <a href="https://www.iitkgp.ac.in">IIT Kharagpur</a>, and degrees from <a href="https://www.ugb.ac.in">University of Gour Banga</a>.</p>
             </div>
 
-            <!-- Sidebar: Research Profile and Contact -->
             <div class="sidebar">
                 <h3>Research Interests</h3>
                 <ul>
@@ -212,27 +235,27 @@
                     <li>Lattice-based Cryptography</li>
                     <li>Secure Cloud Computing</li>
                 </ul>
+
                 <h3>Research Profile</h3>
-                <ul style="list-style: none; display: flex; gap: 6px; padding: 0; margin: 0;">
+                <ul style="display: flex; gap: 6px;">
                     <li><a href="https://scholar.google.com/citations?user=D_iMmsQAAAAJ&hl=en">Google Scholar</a></li>
                     <li><a href="https://dblp.org/pid/305/4367.html">DBLP</a></li>
                 </ul>
 
-                <!-- Latest News Section -->
                 <div class="latest-news-container">
                     <h3 class="latest-news-heading">Latest News</h3>
                     <ul class="scrolling-news">
                         <li><strong>March 2025:</strong> Published a paper in the IACR journal <a href="https://cic.iacr.org">CiC 2025</a>.</li>
-                        <li><strong>Febuary 2025:</strong> Published a paper in the IACR conference <a href="https://pkc.iacr.org/2025/">PKC 2025</a>.</li>
-                        <li><strong>January 2025:</strong> Published a paper in the journal <a href="https://www.sciencedirect.com/journal/theoretical-computer-science">Theoretical Computer Science</a>.</li>
-                        <li><strong>September 2024:</strong> Awarded the <a href="https://www.sbfi.admin.ch/sbfi/en/home/education/scholarships-and-grants/swiss-government-excellence-scholarships.html">Swiss Government Excellence Post Doctoral Scholarships (ESKAS)</a> at the University of St Gallen.</li>
-                        <li><strong>July 2024:</strong> Awarded PhD from IIT Kharagpur, India.</li>
-                        <li><strong>July 2024:</strong> Published a paper at <a href="https://eurosp2024.ieee-security.org">EUROS&P 2024</a>.</li>
+                        <li><strong>Febuary 2025:</strong> Published a paper in <a href="https://pkc.iacr.org/2025/">PKC 2025</a>.</li>
+                        <li><strong>January 2025:</strong> Journal publication in <a href="https://www.sciencedirect.com/journal/theoretical-computer-science">TCS</a>.</li>
+                        <li><strong>September 2024:</strong> Received <a href="https://www.sbfi.admin.ch/sbfi/en/home/education/scholarships-and-grants/swiss-government-excellence-scholarships.html">ESKAS Postdoc Scholarship</a>.</li>
+                        <li><strong>July 2024:</strong> Awarded PhD from IIT Kharagpur.</li>
+                        <li><strong>July 2024:</strong> Paper at <a href="https://eurosp2024.ieee-security.org">EUROS&P 2024</a>.</li>
                     </ul>
                 </div>
 
                 <h3>Contact Address</h3>
-                <p><strong>Subhranil Dutta</strong><br> Post-Doctoral Fellow<br> Room B64 - 310 <br> Torstrasse 25, 9000 St. Gallen, Switzerland.<br> Email: firstname[dot]lastname[at]unisg[dot]ch<br> Mobile: (+91) 8250692230 / (+41) 772027150</p>
+                <p><strong>Subhranil Dutta</strong><br>Post-Doctoral Fellow<br>Room B64 - 310 <br>Torstrasse 25, 9000 St. Gallen, Switzerland.<br>Email: firstname[dot]lastname[at]unisg[dot]ch<br>Mobile: (+91) 8250692230 / (+41) 772027150</p>
             </div>
         </div>
     </section>
