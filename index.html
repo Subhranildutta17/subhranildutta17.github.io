@@ -24,31 +24,36 @@
             text-decoration: underline;
         }
 
-        header {
-            background: #003366;
-            color: white;
-            padding: 0.6rem 1rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+       header {
+    background: #003366;
+    color: white;
+    height: 60px; /* Fixed height for all headers */
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            padding: 0;
-            margin: 0;
-        }
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow-x: auto;  /* Add scroll if needed on small screens */
+    white-space: nowrap;
+}
 
-        nav a {
-            color: white;
-            font-weight: 700;
-            font-size: 1rem;
-        }
+nav a {
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+}
 
-        nav a:hover {
-            color: #ffcc00;
-        }
+nav a:hover {
+    color: #ffcc00;
+}
 
         .hero {
             text-align: center;
