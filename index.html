@@ -1,256 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subhranil Dutta - Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f7f7;
-            line-height: 1.4;
-            color: #333;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subhranil Dutta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#eef5fb;
+    --paper-soft:#dcebf8;
+    --ink:#1c2330;
+    --ink-soft:#4a5364;
+    --navy:#235a8c;
+    --gold:#3f8fd1;
+    --line:#c7dcef;
+    --max:1080px;
+  }
 
-        a {
-            color: #0078e7;
-            text-decoration: none;
-        }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
 
-        a:hover {
-            text-decoration: underline;
-        }
-        
- header {
-            background: #003366;
-            color: white;
-            padding: 0.6rem 1rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+  a{color:var(--navy); text-decoration:none; border-bottom:1px solid transparent; transition:border-color .2s ease, color .2s ease;}
+  a:hover{border-color:var(--gold); color:var(--gold);}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--gold); outline-offset:3px;}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            padding: 0;
-            margin: 0;
-        }
+  h1,h2,h3{
+    font-family:'Newsreader', serif;
+    font-weight:600;
+    color:var(--ink);
+    margin:0;
+  }
 
-        nav a {
-            color: white;
-            font-weight: 700;
-            font-size: 1rem;
-        }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.72rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
 
-        nav a:hover {
-            color: #ffcc00;
-        }
+  /* ---------- header / nav ---------- */
+  header{
+    position:sticky; top:0; z-index:20;
+    background:rgba(222,238,250,.88);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+    box-shadow:0 2px 10px -4px rgba(35,90,140,.15);
+  }
+  .nav-inner{
+    max-width:var(--max);
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:.85rem 1.5rem;
+  }
+  .brand{
+    font-family:'Newsreader', serif;
+    font-weight:600;
+    font-size:1.05rem;
+    letter-spacing:.01em;
+  }
+  .brand .dot{color:var(--gold);}
+  nav ul{list-style:none; display:flex; gap:1.8rem; margin:0; padding:0;}
+  nav a{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.8rem;
+    letter-spacing:.04em;
+    color:var(--ink-soft);
+    border-bottom:none;
+  }
+  nav a:hover{color:var(--navy);}
+  nav a.active{color:var(--ink);}
 
-        .hero {
-            text-align: center;
-            padding: 1rem 1rem;
-            margin-bottom: 1rem;
-        }
+  /* ---------- hero with lattice signature ---------- */
+  .hero{
+    position:relative;
+    max-width:var(--max);
+    margin:0 auto;
+    padding:4.5rem 1.5rem 3.5rem;
+    overflow:hidden;
+  }
+  .lattice-bg{
+    position:absolute;
+    inset:0;
+    z-index:0;
+    opacity:.55;
+    pointer-events:none;
+  }
+  .hero-content{position:relative; z-index:1; max-width:640px;}
+  .hero h1{
+    font-size:clamp(2.2rem, 5vw, 3.1rem);
+    line-height:1.12;
+    margin-top:.6rem;
+  }
+  .hero .role{
+    margin-top:.8rem;
+    font-size:1.05rem;
+    color:var(--ink-soft);
+  }
+  .hero .quote{
+    margin-top:1.6rem;
+    font-family:'Newsreader', serif;
+    font-style:italic;
+    font-size:1.02rem;
+    color:var(--ink-soft);
+    border-left:2px solid var(--gold);
+    padding-left:.9rem;
+  }
+  .hero .quote cite{
+    display:block;
+    margin-top:.3rem;
+    font-style:normal;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.72rem;
+    letter-spacing:.06em;
+    color:#6c87a1;
+  }
 
-        .hero h1 {
-            font-size: 1.6rem;
-            margin-bottom: 0.3rem;
-        }
+  /* ---------- sections ---------- */
+  section{max-width:var(--max); margin:0 auto; padding:0 1.5rem;}
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    gap:.8rem;
+    margin-bottom:1.6rem;
+  }
+  .section-head h2{font-size:1.5rem;}
+  .section-head .idx{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.78rem;
+    color:var(--gold);
+  }
+  .rule{
+    height:1px;
+    background:linear-gradient(to right, var(--line), transparent);
+    flex:1;
+  }
 
-        .hero p {
-            font-size: 0.8rem;
-        }
+  .grid-2{
+    display:grid;
+    grid-template-columns:1.55fr 1fr;
+    gap:2.5rem;
+    align-items:start;
+  }
 
-        section {
-            padding: 1rem;
-            max-width: 960px;
-            margin: 0 auto;
-        }
+  .portrait{
+    width:148px;
+    border-radius:3px;
+    border:1px solid var(--line);
+    box-shadow:0 10px 24px -12px rgba(28,35,48,.35);
+    margin-bottom:1.1rem;
+  }
 
-        h2 {
-            font-size: 1.5rem;
-            color: #003366;
-            border-bottom: 1px solid #0078e7;
-            margin-bottom: 0.8rem;
-            padding-bottom: 0.2rem;
-        }
+  .about-text p{font-size:.97rem; color:var(--ink-soft);}
+  .about-text strong{color:var(--ink);}
 
-        .about-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
+  .card{
+    background:#fdfeff;
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:1.3rem 1.4rem;
+  }
+  .card + .card{margin-top:1.2rem;}
+  .card h3{
+    font-size:.86rem;
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--navy);
+    margin-bottom:.8rem;
+  }
+  .interests{list-style:none; margin:0; padding:0; font-size:.92rem; color:var(--ink-soft);}
+  .interests li{
+    position:relative;
+    padding-left:1.1rem;
+    margin-bottom:.55rem;
+  }
+  .interests li::before{
+    content:"";
+    position:absolute;
+    left:0; top:.5em;
+    width:6px; height:6px;
+    background:var(--gold);
+    border-radius:50%;
+  }
 
-        .about-text {
-            flex: 2;
-            min-width: 45%;
-            font-size: 0.9rem;
-        }
+  .profile-links{display:flex; gap:.6rem; flex-wrap:wrap;}
+  .profile-links a{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.78rem;
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:.35rem .7rem;
+    color:var(--ink);
+  }
+  .profile-links a:hover{border-color:var(--gold); background:var(--paper-soft);}
 
-        .about-text img {
-            width: 160px;
-            border-radius: 8px;
-            margin-bottom: 0.6rem;
-        }
+  .news-viewport{
+    position:relative;
+    height:248px;
+    overflow:hidden;
+    mask-image:linear-gradient(to bottom, transparent 0, black 18px, black calc(100% - 18px), transparent 100%);
+    -webkit-mask-image:linear-gradient(to bottom, transparent 0, black 18px, black calc(100% - 18px), transparent 100%);
+  }
+  .news-viewport:hover .news-list{animation-play-state:paused;}
+  .news-list{
+    list-style:none; margin:0; padding:0; font-size:.88rem;
+    animation:scrollNews 22s linear infinite;
+  }
+  .news-list li{
+    display:grid;
+    grid-template-columns:78px 1fr;
+    gap:.6rem;
+    padding:.55rem 0;
+    border-bottom:1px solid var(--line);
+    color:var(--ink-soft);
+  }
+  .news-list li:last-child{border-bottom:none;}
+  @keyframes scrollNews{
+    0%{transform:translateY(0);}
+    100%{transform:translateY(-50%);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .news-list{animation:none;}
+    .news-viewport{height:auto; max-height:320px; overflow-y:auto; mask-image:none; -webkit-mask-image:none;}
+  }
+  .news-list time{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.72rem;
+    color:var(--gold);
+  }
 
-        .sidebar {
-            flex: 1;
-            background-color: #fff;
-            padding: 0.8rem;
-            border-radius: 6px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            font-size: 0.85rem;
-        }
+  address{
+    font-style:normal;
+    font-size:.9rem;
+    color:var(--ink-soft);
+  }
+  address strong{color:var(--ink); display:block; font-size:.95rem; margin-bottom:.3rem;}
+  address .line{display:block;}
 
-        .sidebar h3 {
-            font-size: 1rem;
-            color: #003366;
-            margin-bottom: 0.6rem;
-            border-bottom: 2px solid #0078e7;
-            padding-bottom: 0.2rem;
-        }
+  footer{
+    margin-top:3.5rem;
+    border-top:1px solid var(--line);
+    padding:1.6rem 1.5rem 2.4rem;
+    text-align:center;
+    font-size:.78rem;
+    color:#6c87a1;
+  }
 
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+  @media (max-width:760px){
+    .grid-2{grid-template-columns:1fr;}
+    nav ul{gap:1.1rem;}
+    .nav-inner{flex-wrap:wrap; gap:.6rem;}
+  }
 
-        .sidebar ul li {
-            margin-bottom: 0.3rem;
-        }
-
-        .sidebar ul li a {
-            color: #0078e7;
-        }
-
-        .sidebar ul li a:hover {
-            text-decoration: underline;
-        }
-
-        .latest-news-container {
-            margin-top: 1rem;
-            position: relative;
-            height: 240px;
-            overflow: hidden;
-            background: #e5f3ff;
-            border-radius: 6px;
-            padding: 0.8rem;
-        }
-
-        .scrolling-news {
-            position: absolute;
-            animation: scrollNews 15s linear infinite;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .scrolling-news li {
-            font-size: 0.75rem;
-            color: #003366;
-            margin: 0.3rem 0;
-        }
-
-        @keyframes scrollNews {
-            0% { transform: translateY(100%); }
-            100% { transform: translateY(-100%); }
-        }
-
-        footer {
-            text-align: center;
-            background: #003366;
-            color: white;
-            padding: 0.6rem 1rem;
-            margin-top: 1.5rem;
-        }
-    </style>
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+  }
+</style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="academic.html">Academic</a></li>
-                <li><a href="awards.html">Awards</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
+<header>
+  <div class="nav-inner">
+    <div class="brand">Subhranil Dutta<span class="dot">.</span></div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="academic.html">Academic</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Welcome to My Personal Website</h1>
-        <p>It is very simple to be happy, but it is very difficult to be simple!</p>
-        <p>- Rabindranath Tagore</p>
-    </section>
-
-    <!-- About Me Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-container">
-            <!-- Picture and Biography -->
-            <div class="about-text">
-                <img src="IMG_1317.jpg" alt="Subhranil Dutta">
-                <h3><strong>Subhranil Dutta</strong></h3>
-                <p>
-   I am currently an Associate Research Fellow at the <a href="https://www.uow.edu.au/research/institute-cybersecurity-cryptology/">Institute of Cybersecurity and Cryptology (iC^2)</a>, <a href="https://www.uow.edu.au/">University of Wollongong</a> (hosted by <a href="https://sites.google.com/view/willy-susilo/">Prof. Willy Susilo</a>), Australia. Previously, I was a Postdoctoral Fellow at <a href="https://iisc.ac.in">Indian Institute of Science, Bangalore</a> (hosted by <a href="https://www.csa.iisc.ac.in/~arpita/">Prof. Arpita Patra</a>) and at the <a href="https://ics.unisg.ch">Institute of Computer Science</a>, <a href="https://www.unisg.ch/de/">University of St. Gallen</a>, Switzerland, supported by the <a href="https://www.sbfi.admin.ch/sbfi/en/home/education/scholarships-and-grants/swiss-government-excellence-scholarships.html">Swiss Government Excellence Scholarship (ESKAS)</a>, and I also served as a Research Assistant at the same institute. My research at the University of St. Gallen was conducted under the supervision of <a href="https://www.unisg.ch/en/university/about-us/organisation/detail/person-id/2e889d58-6b54-431b-ae0e-3198ed46444a/">Professor Katerina Mitrokotsa</a>. 
-   
-   I earned my doctoral degree as a Senior Research Scholar in the <a href="https://www.iitkgp.ac.in/department/MA">Department of Mathematics</a>, <a href="https://www.iitkgp.ac.in">Indian Institute of Technology Kharagpur</a>, India, where I was a recipient of the prestigious 
-   <a href="https://csirhrdg.res.in/">Council of Scientific and Industrial Research (CSIR)</a> fellowship. My Ph.D. research was supervised by <a href="http://www.facweb.iitkgp.ac.in/~sourav/">Professor Sourav Mukhopadhyay</a>, and I also had the opportunity to collaborate with 
-   <a href="http://www.facweb.iitkgp.ac.in/~ratna/">Professor Ratna Dutta</a> from the same department. My academic background includes a B.Sc. degree from <a href="https://maldacollege.ac.in/home.php">Malda College</a>, affiliated with the <a href="https://www.ugb.ac.in">University of Gour Banga</a>, and an M.Sc. in Pure Mathematics from the <a href="https://www.ugb.ac.in">University of Gour Banga</a>.
-</p>
+<div class="hero">
+  <svg class="lattice-bg" viewBox="0 0 1080 360" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <pattern id="lattice" width="48" height="48" patternUnits="userSpaceOnUse">
+        <circle cx="0" cy="0" r="2" fill="#235a8c" opacity="0.35"/>
+      </pattern>
+    </defs>
+    <rect width="1080" height="360" fill="url(#lattice)"/>
+    <g stroke="#3f8fd1" stroke-width="0.6" opacity="0.25">
+      <line x1="780" y1="0" x2="1080" y2="240"/>
+      <line x1="864" y1="0" x2="1080" y2="144"/>
+      <line x1="900" y1="48" x2="1080" y2="312"/>
+      <line x1="700" y1="48" x2="1000" y2="0"/>
+    </g>
+  </svg>
+  <div class="hero-content">
+    <div class="eyebrow">Cryptography &amp; Lattice-Based Security</div>
+    <h1>Subhranil Dutta</h1>
+    <p class="role">Associate Research Fellow, Institute of Cybersecurity and Cryptology (iC²), University of Wollongong</p>
+    <p class="quote">
+      It is very simple to be happy, but it is very difficult to be simple.
+      <cite>— Rabindranath Tagore</cite>
+    </p>
+  </div>
 </div>
 
-            <!-- Sidebar: Research Profile and Contact -->
-            <div class="sidebar">
-                <h3>Research Interests</h3>
-                <ul>
-                    <li>Functional Encryption and its Applications,</li>
-                    <li>Lattice-based Cryptography, 
-                      <li>  Secure Cloud Computing</li>
-                    <li>Private Set Intersection, </li>
-                       <li> Fully Homomorphic Encryption</li>
-                </ul>
-                <h3>Research Profile</h3>
-                <ul style="list-style: none; display: flex; gap: 6px; padding: 0; margin: 0;">
-                    <li><a href="https://scholar.google.com/citations?user=D_iMmsQAAAAJ&hl=en">Google Scholar</a></li>
-                    <li><a href="https://dblp.org/pid/305/4367.html">DBLP</a></li>
-                </ul>
+<section id="about">
+  <div class="section-head">
+    <span class="idx">01</span>
+    <h2>About Me</h2>
+    <div class="rule"></div>
+  </div>
 
-                <!-- Latest News Section -->
-                <div class="latest-news-container">
-                    <h3 class="latest-news-heading">Latest News</h3>
-                    <ul class="scrolling-news">
-                        <li><strong>Febuary 2026:</strong> Accepted a paper on Quadratic FE in <a href="https://pkc.iacr.org/2026/">PKC 2026</a>.</li>
-                       <li><strong>Nov 2025:</strong> Awarded <a href= "https://www.unisg.ch/en/research/research-at-hsg/research-support/internal-funding/international-postdoctoral-fellowships/"> Great Mind Postdoctoral Fellowship</a>.</li>
-                        <li>Invited to join as a PC member for <a href= "https://iseclab.ec.t.kanazawa-u.ac.jp/en/APKC2026.html"> ACM APKC2025</a>.</li>
-                        <li>Served as a PC member for <a href= "https://www.indocrypt2025.in"> Indocrypt 2025 </a> and <a href="https://icsp.co.in/2025/">ICSP 2025</a>.</li>
-                        <li><strong>March 2025:</strong> Published a paper in the IACR journal <a href="https://cic.iacr.org">CiC 2025</a>.</li>
-                        <li><strong>Febuary 2025:</strong> Published a paper in the IACR conference <a href="https://pkc.iacr.org/2025/">PKC 2025</a>.</li>
-                        <li><strong>January 2025:</strong> Published a paper in the journal <a href="https://www.sciencedirect.com/journal/theoretical-computer-science">Theoretical Computer Science</a>.</li>
-                
-                    </ul>
-                </div>
+  <div class="grid-2">
+    <div class="about-text">
+      <img class="portrait" src="IMG_1317.jpg" alt="Portrait of Subhranil Dutta">
+      <p>
+        I am currently an <strong>Associate Research Fellow</strong> at the
+        <a href="https://www.uow.edu.au/research/institute-cybersecurity-cryptology/">Institute of Cybersecurity and Cryptology (iC²)</a>,
+        <a href="https://www.uow.edu.au/">University of Wollongong</a>, hosted by
+        <a href="https://sites.google.com/view/willy-susilo/">Prof. Willy Susilo</a>, Australia.
+      </p>
+      <p>
+        Previously, I was a Postdoctoral Fellow at the
+        <a href="https://iisc.ac.in">Indian Institute of Science, Bangalore</a>, hosted by
+        <a href="https://www.csa.iisc.ac.in/~arpita/">Prof. Arpita Patra</a>, and at the
+        <a href="https://ics.unisg.ch">Institute of Computer Science</a>,
+        <a href="https://www.unisg.ch/de/">University of St. Gallen</a>, Switzerland, supported by the
+        <a href="https://www.sbfi.admin.ch/sbfi/en/home/education/scholarships-and-grants/swiss-government-excellence-scholarships.html">Swiss Government Excellence Scholarship (ESKAS)</a>,
+        where I also served as a Research Assistant. My research at St. Gallen was conducted under the supervision of
+        <a href="https://www.unisg.ch/en/university/about-us/organisation/detail/person-id/2e889d58-6b54-431b-ae0e-3198ed46444a/">Prof. Katerina Mitrokotsa</a>.
+      </p>
+      <p>
+        I earned my doctoral degree as a Senior Research Scholar in the
+        <a href="https://www.iitkgp.ac.in/department/MA">Department of Mathematics</a>,
+        <a href="https://www.iitkgp.ac.in">Indian Institute of Technology Kharagpur</a>, India, as a recipient of the
+        <a href="https://csirhrdg.res.in/">Council of Scientific and Industrial Research (CSIR)</a> fellowship. My Ph.D. was
+        supervised by <a href="http://www.facweb.iitkgp.ac.in/~sourav/">Prof. Sourav Mukhopadhyay</a>, with collaboration from
+        <a href="http://www.facweb.iitkgp.ac.in/~ratna/">Prof. Ratna Dutta</a>. My academic background includes a B.Sc. from
+        <a href="https://maldacollege.ac.in/home.php">Malda College</a>, affiliated with the
+        <a href="https://www.ugb.ac.in">University of Gour Banga</a>, and an M.Sc. in Pure Mathematics from the same university.
+      </p>
+    </div>
 
-                <h3>Contact Address</h3>
-                <p><strong>Subhranil Dutta</strong><br> Associate Research Fellow<br> Building 3, Room 232 <br> Northfields Avenue, 2500 Wollongong, <br> NSW, Australia.<br> Email: subhranildutta17[at]gmail[dot]com / <br> subhranild[at]uow[dot]edu[dot]au<br> Mobile: (+91) 8250 692 230 / (+61) 401 768 517</p>
-            </div>
+    <div class="sidebar">
+      <div class="card">
+        <h3>Research Interests</h3>
+        <ul class="interests">
+          <li>Functional Encryption and its Applications</li>
+          <li>Lattice-based Cryptography</li>
+          <li>Secure Cloud Computing</li>
+          <li>Private Set Intersection</li>
+          <li>Fully Homomorphic Encryption</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Research Profile</h3>
+        <div class="profile-links">
+          <a href="https://scholar.google.com/citations?user=D_iMmsQAAAAJ&hl=en">Google Scholar</a>
+          <a href="https://dblp.org/pid/305/4367.html">DBLP</a>
         </div>
-    </section>
+      </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Subhranil Dutta. All Rights Reserved.</p>
-    </footer>
+      <div class="card">
+        <h3>Latest News</h3>
+        <div class="news-viewport">
+        <ul class="news-list">
+          <li><time>Feb 2026</time><span>Accepted a paper on Quadratic FE at <a href="https://pkc.iacr.org/2026/">PKC 2026</a>.</span></li>
+          <li><time>Nov 2025</time><span>Awarded the <a href="https://www.unisg.ch/en/research/research-at-hsg/research-support/internal-funding/international-postdoctoral-fellowships/">Great Mind Postdoctoral Fellowship</a>.</span></li>
+          <li><time>2025</time><span>Invited as a PC member for <a href="https://iseclab.ec.t.kanazawa-u.ac.jp/en/APKC2026.html">ACM APKC 2026</a>.</span></li>
+          <li><time>2025</time><span>Served as a PC member for <a href="https://www.indocrypt2025.in">Indocrypt 2025</a> and <a href="https://icsp.co.in/2025/">ICSP 2025</a>.</span></li>
+          <li><time>Mar 2025</time><span>Published a paper in <a href="https://cic.iacr.org">IACR CiC</a>.</span></li>
+          <li><time>Feb 2025</time><span>Published a paper at <a href="https://pkc.iacr.org/2025/">PKC 2025</a>.</span></li>
+          <li><time>Jan 2025</time><span>Published a paper in <a href="https://www.sciencedirect.com/journal/theoretical-computer-science">Theoretical Computer Science</a>.</span></li>
+          <!-- duplicated for seamless looping -->
+          <li aria-hidden="true"><time>Feb 2026</time><span>Accepted a paper on Quadratic FE at <a href="https://pkc.iacr.org/2026/">PKC 2026</a>.</span></li>
+          <li aria-hidden="true"><time>Nov 2025</time><span>Awarded the <a href="https://www.unisg.ch/en/research/research-at-hsg/research-support/internal-funding/international-postdoctoral-fellowships/">Great Mind Postdoctoral Fellowship</a>.</span></li>
+          <li aria-hidden="true"><time>2025</time><span>Invited as a PC member for <a href="https://iseclab.ec.t.kanazawa-u.ac.jp/en/APKC2026.html">ACM APKC 2026</a>.</span></li>
+          <li aria-hidden="true"><time>2025</time><span>Served as a PC member for <a href="https://www.indocrypt2025.in">Indocrypt 2025</a> and <a href="https://icsp.co.in/2025/">ICSP 2025</a>.</span></li>
+          <li aria-hidden="true"><time>Mar 2025</time><span>Published a paper in <a href="https://cic.iacr.org">IACR CiC</a>.</span></li>
+          <li aria-hidden="true"><time>Feb 2025</time><span>Published a paper at <a href="https://pkc.iacr.org/2025/">PKC 2025</a>.</span></li>
+          <li aria-hidden="true"><time>Jan 2025</time><span>Published a paper in <a href="https://www.sciencedirect.com/journal/theoretical-computer-science">Theoretical Computer Science</a>.</span></li>
+        </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Contact</h3>
+        <address>
+          <strong>Subhranil Dutta</strong>
+          <span class="line">Associate Research Fellow</span>
+          <span class="line">Building 3, Room 232</span>
+          <span class="line">Northfields Avenue, Wollongong NSW 2500, Australia</span>
+          <span class="line" style="margin-top:.5rem;">subhranildutta17 [at] gmail [dot] com</span>
+          <span class="line">subhranild [at] uow [dot] edu [dot] au</span>
+          <span class="line" style="margin-top:.5rem;">+91 8250 692 230 &nbsp;/&nbsp; +61 401 768 517</span>
+        </address>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 Subhranil Dutta. All rights reserved.
+</footer>
 
 </body>
 </html>
