@@ -132,6 +132,26 @@
   }
 
   /* ---------- publications ---------- */
+  .teach-block{margin-bottom:2.4rem;}
+  .teach-block:last-of-type{margin-bottom:0;}
+  .teach-block h3{
+    font-size:.86rem;
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--navy);
+    margin-bottom:1rem;
+    display:flex;
+    align-items:center;
+    gap:.5rem;
+  }
+  .teach-block h3::before{
+    content:"";
+    width:6px; height:6px;
+    background:var(--gold);
+    border-radius:50%;
+    flex-shrink:0;
+  }
   .pub-list{display:flex; flex-direction:column; gap:1rem;}
   .pub-card{
     background:#fdfeff;
@@ -275,71 +295,81 @@
     <div class="rule"></div>
   </div>
 
-  <div class="pub-list">
+  <div class="teach-block">
+    <h3>Conference Papers</h3>
+    <div class="pub-list">
 
-    <div class="pub-card">
-      <span class="pub-num">01</span>
-      <div class="pub-title"><a href="https://link.springer.com/chapter/10.1007/978-3-032-26737-5_10">Simulation Secure Quadratic Functional Encryption For Inner-Product &amp; Quadratic Predicates</a></div>
-      <div class="pub-meta">with Wilson Tsuata and Aikaterini Mitrokotsa</div>
-      <span class="venue">PKC 2026</span>
+      <div class="pub-card">
+        <span class="pub-num">01</span>
+        <div class="pub-title"><a href="https://link.springer.com/chapter/10.1007/978-3-032-26737-5_10">Simulation Secure Quadratic Functional Encryption For Inner-Product &amp; Quadratic Predicates</a></div>
+        <div class="pub-meta">with Wilson Tsuata and Aikaterini Mitrokotsa</div>
+        <span class="venue">PKC 2026</span>
+      </div>
+
+      <div class="pub-card">
+        <span class="pub-num">02</span>
+        <div class="pub-title"><a href="https://link.springer.com/chapter/10.1007/978-3-031-91832-2_1">Multi-Client Attribute-Based Unbounded Inner Product Functional Encryption, and More</a></div>
+        <div class="pub-meta">with Aikaterini Mitrokotsa, Tapas Pal, Jenit Tomy</div>
+        <span class="venue">PKC 2025</span>
+      </div>
+
+      <div class="pub-card">
+        <span class="pub-num">03</span>
+        <div class="pub-title"><a href="https://doi.org/10.1109/EuroSP60621.2024.00053">SACfe: Secure Access Control in Functional Encryption with Unbounded Data</a></div>
+        <div class="pub-meta">with Uddipana Dowerah, Aikaterini Mitrokotsa, Sayantan Mukherjee, Tapas Pal, Frank Hartmann</div>
+        <span class="venue">IEEE Euro S&amp;P 2024</span>
+      </div>
+
+      <div class="pub-card">
+        <span class="pub-num">04</span>
+        <div class="pub-title"><a href="https://doi.org/10.1007/978-3-031-32636-3_6">Constructing Pairing-Free Unbounded Inner Product Functional Encryption Schemes with Unbounded Inner Product Policy</a></div>
+        <div class="pub-meta">with Ratna Dutta, Sourav Mukhopadhyay</div>
+        <span class="venue">SecITC 2022</span>
+      </div>
+
+      <div class="pub-card">
+        <span class="pub-num">05</span>
+        <div class="pub-title"><a href="https://doi.org/10.1007/978-3-030-90402-9_13">Fully Secure Unbounded Zero Inner Product Encryption with Short Ciphertexts and Keys</a></div>
+        <div class="pub-meta">with Tapas Pal, Ratna Dutta</div>
+        <span class="venue">ProvSec 2021</span>
+      </div>
+
     </div>
+  </div>
 
-    <div class="pub-card">
-      <span class="pub-num">02</span>
-      <div class="pub-title"><a href="https://doi.org/10.62056/av4fe0zn4">Fully Collusion Resistant Traceable Identity-Based Inner Product Functional Encryption</a></div>
-      <div class="pub-meta">with Tapas Pal, Amit Kumar Singh, Sourav Mukhopadhyay</div>
-      <span class="venue">IACR CiC 2025</span>
+  <div class="teach-block">
+    <h3>Journal Articles</h3>
+    <div class="pub-list">
+
+      <div class="pub-card">
+        <span class="pub-num">01</span>
+        <div class="pub-title"><a href="https://doi.org/10.62056/av4fe0zn4">Fully Collusion Resistant Traceable Identity-Based Inner Product Functional Encryption</a></div>
+        <div class="pub-meta">with Tapas Pal, Amit Kumar Singh, Sourav Mukhopadhyay</div>
+        <span class="venue">IACR CiC 2025</span>
+      </div>
+
+      <div class="pub-card">
+        <span class="pub-num">02</span>
+        <div class="pub-title"><a href="https://doi.org/10.1016/j.tcs.2025.115085">Securing Data in the Cloud using Pairing-Free Inner Product Functional Encryption with Unbounded Vector Size</a></div>
+        <div class="pub-meta">with Ratna Dutta, Sourav Mukhopadhyay</div>
+        <span class="venue">Theoretical Computer Science, 2025</span>
+      </div>
+
+      <div class="pub-card">
+        <span class="pub-num">03</span>
+        <div class="pub-title"><a href="https://doi.org/10.1016/j.tcs.2024.114502">Reinforcing Privacy in Cloud Computing via Adaptively Secure Non-zero Inner Product Encryption and Anonymous Identity-Based Revocation in Unbounded Setting</a></div>
+        <div class="pub-meta">with Tapas Pal, Ratna Dutta</div>
+        <span class="venue">Theoretical Computer Science, 2024</span>
+      </div>
+
+      <div class="pub-card">
+        <span class="pub-num">04</span>
+        <div class="pub-title"><a href="https://doi.org/10.1007/s00145-023-09458-2">Unbounded Predicate Inner Product Functional Encryption from Pairings</a></div>
+        <div class="pub-meta">with Uddipana Dowerah, Aikaterini Mitrokotsa, Sayantan Mukherjee, Tapas Pal</div>
+        <span class="venue">Journal of Cryptology, 2023</span>
+      </div>
+
     </div>
-
-    <div class="pub-card">
-      <span class="pub-num">03</span>
-      <div class="pub-title"><a href="https://link.springer.com/chapter/10.1007/978-3-031-91832-2_1">Multi-Client Attribute-Based Unbounded Inner Product Functional Encryption, and More</a></div>
-      <div class="pub-meta">with Aikaterini Mitrokotsa, Tapas Pal, Jenit Tomy</div>
-      <span class="venue">PKC 2025</span>
-    </div>
-
-    <div class="pub-card">
-      <span class="pub-num">04</span>
-      <div class="pub-title"><a href="https://doi.org/10.1016/j.tcs.2025.115085">Securing Data in the Cloud using Pairing-Free Inner Product Functional Encryption with Unbounded Vector Size</a></div>
-      <div class="pub-meta">with Ratna Dutta, Sourav Mukhopadhyay</div>
-      <span class="venue">Theoretical Computer Science, 2025</span>
-    </div>
-
-    <div class="pub-card">
-      <span class="pub-num">05</span>
-      <div class="pub-title"><a href="https://doi.org/10.1109/EuroSP60621.2024.00053">SACfe: Secure Access Control in Functional Encryption with Unbounded Data</a></div>
-      <div class="pub-meta">with Uddipana Dowerah, Aikaterini Mitrokotsa, Sayantan Mukherjee, Tapas Pal, Frank Hartmann</div>
-      <span class="venue">IEEE Euro S&amp;P 2024</span>
-    </div>
-
-    <div class="pub-card">
-      <span class="pub-num">06</span>
-      <div class="pub-title"><a href="https://doi.org/10.1016/j.tcs.2024.114502">Reinforcing Privacy in Cloud Computing via Adaptively Secure Non-zero Inner Product Encryption and Anonymous Identity-Based Revocation in Unbounded Setting</a></div>
-      <div class="pub-meta">with Tapas Pal, Ratna Dutta</div>
-      <span class="venue">Theoretical Computer Science, 2024</span>
-    </div>
-
-    <div class="pub-card">
-      <span class="pub-num">07</span>
-      <div class="pub-title"><a href="https://doi.org/10.1007/s00145-023-09458-2">Unbounded Predicate Inner Product Functional Encryption from Pairings</a></div>
-      <div class="pub-meta">with Uddipana Dowerah, Aikaterini Mitrokotsa, Sayantan Mukherjee, Tapas Pal</div>
-      <span class="venue">Journal of Cryptology, 2023</span>
-    </div>
-
-    <div class="pub-card">
-      <span class="pub-num">08</span>
-      <div class="pub-title"><a href="https://doi.org/10.1007/978-3-031-32636-3_6">Constructing Pairing-Free Unbounded Inner Product Functional Encryption Schemes with Unbounded Inner Product Policy</a></div>
-      <div class="pub-meta">with Ratna Dutta, Sourav Mukhopadhyay</div>
-      <span class="venue">SecITC 2022</span>
-    </div>
-
-    <div class="pub-card">
-      <span class="pub-num">09</span>
-      <div class="pub-title"><a href="https://doi.org/10.1007/978-3-030-90402-9_13">Fully Secure Unbounded Zero Inner Product Encryption with Short Ciphertexts and Keys</a></div>
-      <div class="pub-meta">with Tapas Pal, Ratna Dutta</div>
-      <span class="venue">ProvSec 2021</span>
-    </div>
-
   </div>
 </section>
 
