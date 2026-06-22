@@ -1,298 +1,406 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subhranil Dutta - Teaching</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Common styles from your previous page */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f7f7;
-            line-height: 1.4;
-            color: #333;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subhranil Dutta - Teaching</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#eef5fb;
+    --paper-soft:#dcebf8;
+    --ink:#1c2330;
+    --ink-soft:#4a5364;
+    --navy:#235a8c;
+    --gold:#3f8fd1;
+    --line:#c7dcef;
+    --max:1080px;
+  }
 
-        a {
-            color: #0078e7;
-            text-decoration: none;
-        }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
 
-        a:hover {
-            text-decoration: underline;
-        }
+  a{color:var(--navy); text-decoration:none; border-bottom:1px solid transparent; transition:border-color .2s ease, color .2s ease;}
+  a:hover{border-color:var(--gold); color:var(--gold);}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--gold); outline-offset:3px;}
 
-        header {
-            background: #003366;
-            color: white;
-            padding: 0.6rem 1rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+  h1,h2,h3,h4{
+    font-family:'Newsreader', serif;
+    font-weight:600;
+    color:var(--ink);
+    margin:0;
+  }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            padding: 0;
-            margin: 0;
-        }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.72rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
 
-        nav a {
-            color: white;
-            font-weight: 700;
-            font-size: 1rem;
-        }
+  /* ---------- header / nav ---------- */
+  header{
+    position:sticky; top:0; z-index:20;
+    background:rgba(222,238,250,.88);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+    box-shadow:0 2px 10px -4px rgba(35,90,140,.15);
+  }
+  .nav-inner{
+    max-width:var(--max);
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:.85rem 1.5rem;
+  }
+  .brand{
+    font-family:'Newsreader', serif;
+    font-weight:600;
+    font-size:1.05rem;
+    letter-spacing:.01em;
+  }
+  .brand .dot{color:var(--gold);}
+  nav ul{list-style:none; display:flex; gap:1.8rem; margin:0; padding:0;}
+  nav a{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.8rem;
+    letter-spacing:.04em;
+    color:var(--ink-soft);
+    border-bottom:none;
+  }
+  nav a:hover{color:var(--navy);}
+  nav a.active{color:var(--ink);}
 
-        nav a:hover {
-            color: #ffcc00;
-        }
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    max-width:var(--max);
+    margin:0 auto;
+    padding:4.5rem 1.5rem 3rem;
+    overflow:hidden;
+  }
+  .lattice-bg{
+    position:absolute;
+    inset:0;
+    z-index:0;
+    opacity:.5;
+    pointer-events:none;
+  }
+  .hero-content{position:relative; z-index:1; max-width:640px;}
+  .hero h1{
+    font-size:clamp(2.1rem, 5vw, 2.9rem);
+    line-height:1.12;
+    margin-top:.6rem;
+  }
+  .hero .role{
+    margin-top:.8rem;
+    font-size:1.05rem;
+    color:var(--ink-soft);
+    max-width:48ch;
+  }
 
-        .hero {
-            text-align: center;
-            padding: 1rem 1rem;
-            margin-bottom: 1rem;
-        }
+  /* ---------- sections ---------- */
+  section{max-width:var(--max); margin:0 auto; padding:0 1.5rem; padding-bottom:3.5rem;}
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    gap:.8rem;
+    margin-bottom:1.8rem;
+  }
+  .section-head h2{font-size:1.5rem;}
+  .section-head .idx{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.78rem;
+    color:var(--gold);
+  }
+  .rule{
+    height:1px;
+    background:linear-gradient(to right, var(--line), transparent);
+    flex:1;
+  }
 
-        .hero h1 {
-            font-size: 1.6rem;
-            margin-bottom: 0.3rem;
-        }
+  .intro-text{font-size:.97rem; color:var(--ink-soft); max-width:70ch; margin-bottom:2.2rem;}
 
-        .hero p {
-            font-size: 0.8rem;
-        }
+  /* ---------- teaching blocks ---------- */
+  .teach-block{margin-bottom:2.2rem;}
+  .teach-block:last-of-type{margin-bottom:0;}
+  .teach-block h3{
+    font-size:.86rem;
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--navy);
+    margin-bottom:1rem;
+    display:flex;
+    align-items:center;
+    gap:.5rem;
+  }
+  .teach-block h3::before{
+    content:"";
+    width:6px; height:6px;
+    background:var(--gold);
+    border-radius:50%;
+    flex-shrink:0;
+  }
 
-        section {
-            padding: 1rem;
-            max-width: 960px;
-            margin: 0 auto;
-        }
+  .table-card{
+    background:#fdfeff;
+    border:1px solid var(--line);
+    border-radius:8px;
+    overflow:hidden;
+  }
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:.88rem;
+  }
+  thead th{
+    background:var(--navy);
+    color:#fff;
+    text-align:left;
+    padding:.7rem 1rem;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.72rem;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    font-weight:500;
+  }
+  tbody td{
+    padding:.7rem 1rem;
+    border-bottom:1px solid var(--line);
+    color:var(--ink-soft);
+    vertical-align:top;
+  }
+  tbody td:first-child{
+    color:var(--ink);
+    font-weight:500;
+  }
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:nth-child(even){background:var(--paper-soft);}
+  tbody tr:hover{background:#eaf2fb;}
 
-        h2 {
-            font-size: 1.5rem;
-            color: #003366;
-            border-bottom: 1px solid #0078e7;
-            margin-bottom: 0.8rem;
-            padding-bottom: 0.2rem;
-        }
+  /* ---------- philosophy ---------- */
+  .philosophy{
+    margin-top:2.4rem;
+    background:#fdfeff;
+    border:1px solid var(--line);
+    border-left:3px solid var(--gold);
+    border-radius:6px;
+    padding:1.4rem 1.6rem;
+  }
+  .philosophy h3{
+    font-size:.86rem;
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--navy);
+    margin-bottom:.8rem;
+  }
+  .philosophy p{
+    font-family:'Newsreader', serif;
+    font-style:italic;
+    font-size:1.02rem;
+    color:var(--ink-soft);
+    margin:0;
+  }
 
-        .about-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
+  footer{
+    margin-top:1rem;
+    border-top:1px solid var(--line);
+    padding:1.6rem 1.5rem 2.4rem;
+    text-align:center;
+    font-size:.78rem;
+    color:#6c87a1;
+  }
 
-        .about-text {
-            flex: 2;
-            min-width: 45%;
-            font-size: 0.9rem;
-        }
+  @media (max-width:760px){
+    nav ul{gap:1.1rem;}
+    .nav-inner{flex-wrap:wrap; gap:.6rem;}
+    table{font-size:.8rem;}
+    thead th, tbody td{padding:.55rem .7rem;}
+  }
 
-        .about-text img {
-            width: 120px;
-            border-radius: 8px;
-            margin-bottom: 0.6rem;
-        }
-
-        .sidebar {
-            flex: 1;
-            background-color: #fff;
-            padding: 0.8rem;
-            border-radius: 6px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            font-size: 0.85rem;
-        }
-
-        .sidebar h3 {
-            font-size: 1rem;
-            color: #003366;
-            margin-bottom: 0.6rem;
-            border-bottom: 2px solid #0078e7;
-            padding-bottom: 0.2rem;
-        }
-
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .sidebar ul li {
-            margin-bottom: 0.3rem;
-        }
-
-        .sidebar ul li a {
-            color: #0078e7;
-        }
-
-        .sidebar ul li a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            background: #003366;
-            color: white;
-            padding: 0.6rem 1rem;
-            margin-top: 1.5rem;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 7px;
-            overflow: hidden;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #003366;
-            color: white;
-            font-weight: bold;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        tr:hover {
-            background-color: #e0e0e0;
-            transition: 0.3s;
-        }
-                /* New CSS to make the Course column text lowercase */
-        td:first-child {
-            text-transform: uppercase;
-        }
-    </style>
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+  }
+</style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="academic.html">Academic</a></li>
-                <li><a href="awards.html">Awards</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+  <div class="nav-inner">
+    <div class="brand">Subhranil Dutta<span class="dot">.</span></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="academic.html">Academic</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="teaching.html" class="active">Teaching</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Teaching</h1>
-        <p>Sharing knowledge and helping students grow is a core part of my academic journey.</p>
-    </section>
+<div class="hero">
+  <svg class="lattice-bg" viewBox="0 0 1080 280" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <pattern id="lattice" width="48" height="48" patternUnits="userSpaceOnUse">
+        <circle cx="0" cy="0" r="2" fill="#235a8c" opacity="0.3"/>
+      </pattern>
+    </defs>
+    <rect width="1080" height="280" fill="url(#lattice)"/>
+    <g stroke="#3f8fd1" stroke-width="0.6" opacity="0.22">
+      <line x1="780" y1="0" x2="1080" y2="200"/>
+      <line x1="864" y1="0" x2="1080" y2="120"/>
+      <line x1="900" y1="40" x2="1080" y2="260"/>
+    </g>
+  </svg>
+  <div class="hero-content">
+    <div class="eyebrow">In the Classroom</div>
+    <h1>Teaching</h1>
+    <p class="role">Sharing knowledge and helping students grow is a core part of my academic journey.</p>
+  </div>
+</div>
 
-    <!-- Teaching Section -->
-    <section id="teaching">
-        <h2>Teaching Experience</h2>
-        <div class="about-container">
-            <!-- Teaching Description -->
-            <div class="about-text">
-                <p>I have had the privilege of teaching a variety of subjects in computer science and mathematics, spanning from introductory to advanced levels. Below is a summary of my experience as a Teaching Assistant:</p>
+<section id="teaching">
+  <div class="section-head">
+    <span class="idx">06</span>
+    <h2>Teaching Experience</h2>
+    <div class="rule"></div>
+  </div>
 
-                <h4>SWAYAM-NPTEL online courses:</h4>
-        <table>
-            <tr>
-                <th>Course</th>
-                <th>Instructor</th>
-                <th>Durations</th>
-            </tr>
-            <tr>
-                <td>Cryptography and Network Security</td>
-                <td>Prof. Sourav Mukhopadhyay, IIT Kharagpur</td>
-                <td>2022 July-Oct</td>
-            </tr>
-            <tr>
-                <td>Introduction to Algorithms and Analysis</td>
-                <td>Prof. Sourav Mukhopadhyay, IIT Kharagpur</td>
-                <td>2020 Jan-April, 2020 Aug-Oct, 2021 Aug-Oct</td>
-            </tr>
-            <tr>
-                <td>Introduction to Automata, Languages and Computation</td>
-                <td>Prof. Sourav Mukhopadhyay, IIT Kharagpur</td>
-                <td>2021 Jan-April, 2023 Jan-April</td>
-            </tr>
-            <tr>
-                <td>Introduction to Abstract and Linear Algebra</td>
-                <td>Prof. Sourav Mukhopadhyay, IIT Kharagpur</td>
-                <td>2021 July-Oct, 2022 July-Oct, 2023 July-Oct</td>
-            </tr>
-            <tr>
-                <td>Fundamental Algorithms: Design and Analysis</td>
-                <td>Prof. Sourav Mukhopadhyay, IIT Kharagpur</td>
-                <td>2022 Jan-April, 2023 Jan-April</td>
-            </tr>
-        </table>
+  <p class="intro-text">
+    I have had the privilege of teaching a variety of subjects in computer science and mathematics, spanning from
+    introductory to advanced levels. Below is a summary of my experience as a Teaching Assistant.
+  </p>
 
-                  <h4>IIT Kharagpur (Department of Mathematics) courses:</h4>
-        <table>
-            <tr>
-                <th>Course</th>
-                <th>Instructor</th>
-                <th>Durations</th>
-            </tr>
-            <tr>
-                <td>Advanced Calculus (MA11003) </td>
-                <td>Prof. Ratna Dutta, IIT Kharagpur</td>
-                <td>2020 Dec- 2021 Feb, 2021 Dec-2022 March</td>
-            </tr>
-            <tr>
-                <td>Linear Algebra, Numerical and Complex Analysis (MA11004)</td>
-                <td>Prof. Rajesh Kannan, Prof. Debopriya Biswas, IIT Kharagpur </td>
-                <td>2022 April-June, 2021 Mar-July.</td>
-            </tr>
-        </table>
+  <div class="teach-block">
+    <h3>SWAYAM-NPTEL Online Courses</h3>
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Instructor</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cryptography and Network Security</td>
+            <td>Prof. Sourav Mukhopadhyay, IIT Kharagpur</td>
+            <td>July&ndash;Oct 2022</td>
+          </tr>
+          <tr>
+            <td>Introduction to Algorithms and Analysis</td>
+            <td>Prof. Sourav Mukhopadhyay, IIT Kharagpur</td>
+            <td>Jan&ndash;Apr 2020, Aug&ndash;Oct 2020, Aug&ndash;Oct 2021</td>
+          </tr>
+          <tr>
+            <td>Introduction to Automata, Languages and Computation</td>
+            <td>Prof. Sourav Mukhopadhyay, IIT Kharagpur</td>
+            <td>Jan&ndash;Apr 2021, Jan&ndash;Apr 2023</td>
+          </tr>
+          <tr>
+            <td>Introduction to Abstract and Linear Algebra</td>
+            <td>Prof. Sourav Mukhopadhyay, IIT Kharagpur</td>
+            <td>July&ndash;Oct 2021, July&ndash;Oct 2022, July&ndash;Oct 2023</td>
+          </tr>
+          <tr>
+            <td>Fundamental Algorithms: Design and Analysis</td>
+            <td>Prof. Sourav Mukhopadhyay, IIT Kharagpur</td>
+            <td>Jan&ndash;Apr 2022, Jan&ndash;Apr 2023</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
-                <h4>Universität St. Gallen (Institute of Computer Science (ICS-HSG)) courses:</h4>
-        <table>
-            <tr>
-                <th>Course</th>
-                <th>Instructor</th>
-                <th>Durations</th>
-            </tr>
-            <tr>
-                <td>Privacy-Preserving Cryptographic Protocols </td>
-                <td>Prof. Katerina Mitrokotsa, Universität St. Gallen</td>
-                <td>2025 Feb-May</td>
-            </tr>
-             <tr>
-                <td>Integrative Master Project</td>
-                <td>Prof. Katerina Mitrokotsa, Dr. Subhranil Dutta, Universität St. Gallen</td>
-                <td>2024 Sept-Dec.</td>
-            </tr>
-            <tr>
-                <td>Security & Privacy in Cloud-Assisted Computing</td>
-                <td>Prof. Katerina Mitrokotsa, Universität St. Gallen</td>
-                <td>2024 Sept-Dec.</td>
-            </tr>
-        </table>
+  <div class="teach-block">
+    <h3>IIT Kharagpur &mdash; Department of Mathematics</h3>
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Instructor</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Advanced Calculus (MA11003)</td>
+            <td>Prof. Ratna Dutta, IIT Kharagpur</td>
+            <td>Dec 2020&ndash;Feb 2021, Dec 2021&ndash;Mar 2022</td>
+          </tr>
+          <tr>
+            <td>Linear Algebra, Numerical and Complex Analysis (MA11004)</td>
+            <td>Prof. Rajesh Kannan, Prof. Debopriya Biswas, IIT Kharagpur</td>
+            <td>Apr&ndash;June 2022, Mar&ndash;July 2021</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
-                <h4>Teaching Philosophy:</h4>
-                <p>My teaching philosophy centers on the idea that students should not only learn theoretical concepts but also apply them to real-world challenges. I believe in fostering an interactive and engaging learning environment where students are encouraged to explore, question, and innovate.</p>
-            </div>
-        </div>
-    </section>
+  <div class="teach-block">
+    <h3>Universit&auml;t St. Gallen &mdash; Institute of Computer Science (ICS-HSG)</h3>
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Instructor</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Privacy-Preserving Cryptographic Protocols</td>
+            <td>Prof. Katerina Mitrokotsa, Universit&auml;t St. Gallen</td>
+            <td>Feb&ndash;May 2025</td>
+          </tr>
+          <tr>
+            <td>Integrative Master Project</td>
+            <td>Prof. Katerina Mitrokotsa, Dr. Subhranil Dutta, Universit&auml;t St. Gallen</td>
+            <td>Sept&ndash;Dec 2024</td>
+          </tr>
+          <tr>
+            <td>Security &amp; Privacy in Cloud-Assisted Computing</td>
+            <td>Prof. Katerina Mitrokotsa, Universit&auml;t St. Gallen</td>
+            <td>Sept&ndash;Dec 2024</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Subhranil Dutta. All Rights Reserved.</p>
-    </footer>
+  <div class="philosophy">
+    <h3>Teaching Philosophy</h3>
+    <p>
+      My teaching philosophy centers on the idea that students should not only learn theoretical concepts but also
+      apply them to real-world challenges. I believe in fostering an interactive and engaging learning environment
+      where students are encouraged to explore, question, and innovate.
+    </p>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 Subhranil Dutta. All rights reserved.
+</footer>
 
 </body>
 </html>
