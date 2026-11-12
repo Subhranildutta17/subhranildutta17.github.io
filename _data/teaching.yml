@@ -1,0 +1,51 @@
+# Teaching page. Each group becomes one table.
+intro: >-
+  I have had the privilege of teaching a variety of subjects in computer science
+  and mathematics, spanning from introductory to advanced levels. Below is a
+  summary of my teaching and supervision experience.
+
+groups:
+  - title: SWAYAM-NPTEL Online Courses
+    courses:
+      - course: Cryptography and Network Security
+        instructor: Prof. Sourav Mukhopadhyay, IIT Kharagpur
+        duration: July–Oct 2022
+      - course: Introduction to Algorithms and Analysis
+        instructor: Prof. Sourav Mukhopadhyay, IIT Kharagpur
+        duration: Jan–Apr 2020, Aug–Oct 2020, Aug–Oct 2021
+      - course: Introduction to Automata, Languages and Computation
+        instructor: Prof. Sourav Mukhopadhyay, IIT Kharagpur
+        duration: Jan–Apr 2021, Jan–Apr 2023
+      - course: Introduction to Abstract and Linear Algebra
+        instructor: Prof. Sourav Mukhopadhyay, IIT Kharagpur
+        duration: July–Oct 2021, July–Oct 2022, July–Oct 2023
+      - course: "Fundamental Algorithms: Design and Analysis"
+        instructor: Prof. Sourav Mukhopadhyay, IIT Kharagpur
+        duration: Jan–Apr 2022, Jan–Apr 2023
+
+  - title: IIT Kharagpur — Department of Mathematics
+    courses:
+      - course: Advanced Calculus (MA11003)
+        instructor: Prof. Ratna Dutta, IIT Kharagpur
+        duration: Dec 2020–Feb 2021, Dec 2021–Mar 2022
+      - course: Linear Algebra, Numerical and Complex Analysis (MA11004)
+        instructor: Prof. Rajesh Kannan, Prof. Debopriya Biswas, IIT Kharagpur
+        duration: Apr–June 2022, Mar–July 2021
+
+  - title: Universität St. Gallen — Institute of Computer Science (ICS-HSG)
+    courses:
+      - course: Privacy-Preserving Cryptographic Protocols
+        instructor: Prof. Katerina Mitrokotsa, Universität St. Gallen
+        duration: Feb–May 2025
+      - course: Integrative Master Project
+        instructor: Prof. Katerina Mitrokotsa, Dr. Subhranil Dutta, Universität St. Gallen
+        duration: Sept–Dec 2024
+      - course: Security & Privacy in Cloud-Assisted Computing
+        instructor: Prof. Katerina Mitrokotsa, Universität St. Gallen
+        duration: Sept–Dec 2024
+
+philosophy: >-
+  My teaching philosophy centers on the idea that students should not only learn
+  theoretical concepts but also apply them to real-world challenges. I believe in
+  fostering an interactive and engaging learning environment where students are
+  encouraged to explore, question, and innovate.

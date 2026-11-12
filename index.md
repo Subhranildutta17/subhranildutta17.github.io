@@ -1,0 +1,9 @@
+---
+layout: home
+---
+
+I am currently an **Associate Research Fellow** at the [Institute of Cybersecurity and Cryptology (iC²)](https://www.uow.edu.au/research/institute-cybersecurity-cryptology/), [University of Wollongong](https://www.uow.edu.au/), hosted by [Prof. Willy Susilo](https://sites.google.com/view/willy-susilo/), Australia.
+
+Previously, I was a Postdoctoral Fellow at the [Indian Institute of Science, Bangalore](https://iisc.ac.in), hosted by [Prof. Arpita Patra](https://www.csa.iisc.ac.in/~arpita/), and at the [Institute of Computer Science](https://ics.unisg.ch), [University of St. Gallen](https://www.unisg.ch/de/), Switzerland, supported by the [Swiss Government Excellence Scholarship (ESKAS)](https://www.sbfi.admin.ch/sbfi/en/home/education/scholarships-and-grants/swiss-government-excellence-scholarships.html), where I also served as a Research Assistant. My research at St. Gallen was conducted under the supervision of [Prof. Katerina Mitrokotsa](https://www.unisg.ch/en/university/about-us/organisation/detail/person-id/2e889d58-6b54-431b-ae0e-3198ed46444a/).
+
+I earned my doctoral degree as a Senior Research Scholar in the [Department of Mathematics](https://www.iitkgp.ac.in/department/MA), [Indian Institute of Technology Kharagpur](https://www.iitkgp.ac.in), India, as a recipient of the [Council of Scientific and Industrial Research (CSIR)](https://csirhrdg.res.in/) fellowship. My Ph.D. was supervised by [Prof. Sourav Mukhopadhyay](http://www.facweb.iitkgp.ac.in/~sourav/), with collaboration from [Prof. Ratna Dutta](http://www.facweb.iitkgp.ac.in/~ratna/). My academic background includes a B.Sc. from [Malda College](https://maldacollege.ac.in/home.php), affiliated with the [University of Gour Banga](https://www.ugb.ac.in), and an M.Sc. in Pure Mathematics from the same university.

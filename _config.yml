@@ -1,0 +1,90 @@
+# ---------------------------------------------------------------
+#  Site settings. After editing this file, wait for GitHub Pages
+#  to rebuild (about a minute), or restart `jekyll serve` locally.
+# ---------------------------------------------------------------
+
+title: Subhranil Dutta
+description: >-
+  Associate Research Fellow at the Institute of Cybersecurity and Cryptology
+  (iC²), University of Wollongong, working on functional encryption,
+  lattice-based cryptography and secure cloud computing.
+url: "https://subhranildutta17.github.io"
+baseurl: ""
+tagline: Associate Research Fellow, iC², University of Wollongong   # shown in the browser tab on the home page
+lang: en
+
+# ---- You -------------------------------------------------------
+author:
+  name: Subhranil Dutta
+  role: Associate Research Fellow, Institute of Cybersecurity and Cryptology (iC²), University of Wollongong
+  tagline: Cryptography &amp; Lattice-Based Security     # small blue line above your name
+  quote: It is very simple to be happy, but it is very difficult to be simple.
+  quote_author: Rabindranath Tagore
+  photo: /assets/img/portrait.jpg
+  photo_alt: Portrait of Subhranil Dutta
+  position: Associate Research Fellow
+  affiliation:
+    - name: Institute of Cybersecurity and Cryptology (iC²)
+      url: https://www.uow.edu.au/research/institute-cybersecurity-cryptology/
+    - name: University of Wollongong, Australia
+      url: https://www.uow.edu.au/
+  email: subhranild [at] uow [dot] edu [dot] au      # main email shown at the top
+  cv: /assets/cv.pdf                                   # leave empty to hide the CV button
+
+  interests:
+    - Functional Encryption and its Applications
+    - Lattice-based Cryptography
+    - Secure Cloud Computing
+    - Private Set Intersection
+    - Fully Homomorphic Encryption
+
+  profiles:
+    - name: Google Scholar
+      url: https://scholar.google.com/citations?user=D_iMmsQAAAAJ&hl=en
+    - name: DBLP
+      url: https://dblp.org/pid/305/4367.html
+    - name: LinkedIn
+      url: https://www.linkedin.com/in/subhranil-dutta-62a700198/
+
+  contact:
+    position: Associate Research Fellow
+    address:
+      - Building 3, Room 232
+      - Northfields Avenue, Wollongong NSW 2500, Australia
+    emails:                     # written in [at]/[dot] form to slow down spam bots
+      - subhranildutta17 [at] gmail [dot] com
+      - subhranild [at] uow [dot] edu [dot] au
+    phones: +91 8250 692 230 &nbsp;/&nbsp; +61 401 768 517
+
+# ---- Build (no need to touch) ------------------------------------
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: false
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Picture used when a page is shared (LinkedIn, Slack, WhatsApp ...)
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/portrait.jpg
+
+sass:
+  style: compressed
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+  - .jekyll-cache
+  # files from the old hand-written site (no longer used; safe to delete)
+  - styles.css
+  - IMG_1160.jpg
+  - IMG_1317.jpg
+  - your-picture.jpg

@@ -1,0 +1,14 @@
+# Talks. Newest first. "title" is the talk or paper title; "event" where it was given.
+# Optional: slides: /assets/slides/xyz.pdf   video: https://youtube.com/...
+- event: PKC 2025
+  year: 2025
+  title: "Multi-Client Attribute-Based Unbounded Inner Product Functional Encryption, and More"
+  slides: https://iacr.org/submit/files/slides/2025/pkc/pkc2025/127/127_slides.pdf
+
+- event: SecITC 2022
+  year: 2022
+  title: "Constructing Pairing-Free Unbounded Inner Product Functional Encryption Schemes with Unbounded Inner Product Policy"
+
+- event: ProvSec 2021
+  year: 2021
+  title: "Fully Secure Unbounded Zero Inner Product Encryption with Short Ciphertexts and Keys"

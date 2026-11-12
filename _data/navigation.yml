@@ -1,0 +1,11 @@
+# Menu in the profile card. Order here = order on the page.
+- title: Home
+  url: /
+- title: Research
+  url: /research.html
+- title: Teaching
+  url: /teaching.html
+- title: Academic
+  url: /academic.html
+- title: Awards
+  url: /awards.html

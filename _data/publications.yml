@@ -1,0 +1,80 @@
+# Publications. Newest first within each list.
+# To add a paper, copy a block and edit it. Authors in the order printed on the paper.
+#
+#   title:       paper title
+#   authors:     [First Author, Second Author, ...]
+#   venue:       short name shown as a tag, e.g. "PKC 2026"
+#   venue_long:  full name of the proceedings or journal
+#   year:        2026
+#   doi:         10.xxxx/...         (optional, becomes a DOI link)
+#   eprint:      2024/1234           (optional, IACR ePrint number)
+#   pdf:         /assets/papers/x.pdf (optional)
+#   slides:      /assets/slides/x.pdf (optional)
+
+conference:
+  - title: "Simulation Secure Quadratic Functional Encryption for Inner-Product and Quadratic Predicates"
+    authors: [Wilson Tsuata, Subhranil Dutta, Aikaterini Mitrokotsa]
+    venue: PKC 2026
+    venue_long: "Public-Key Cryptography – PKC 2026"
+    year: 2026
+    doi: 10.1007/978-3-032-26737-5_10
+
+  - title: "Multi-Client Attribute-Based Unbounded Inner Product Functional Encryption, and More"
+    authors: [Subhranil Dutta, Aikaterini Mitrokotsa, Tapas Pal, Jenit Tomy]
+    venue: PKC 2025
+    venue_long: "Public-Key Cryptography – PKC 2025"
+    year: 2025
+    doi: 10.1007/978-3-031-91832-2_1
+    eprint: 2025/423
+
+  - title: "SACfe: Secure Access Control in Functional Encryption with Unbounded Data"
+    authors: [Uddipana Dowerah, Subhranil Dutta, Frank Hartmann, Aikaterini Mitrokotsa, Sayantan Mukherjee, Tapas Pal]
+    venue: IEEE EuroS&P 2024
+    venue_long: "9th IEEE European Symposium on Security and Privacy (EuroS&P)"
+    year: 2024
+    doi: 10.1109/EuroSP60621.2024.00053
+    eprint: 2024/1031
+
+  - title: "Constructing Pairing-Free Unbounded Inner Product Functional Encryption Schemes with Unbounded Inner Product Policy"
+    authors: [Subhranil Dutta, Ratna Dutta, Sourav Mukhopadhyay]
+    venue: SecITC 2022
+    venue_long: "Innovative Security Solutions for Information Technology and Communications (SecITC 2022)"
+    year: 2022
+    doi: 10.1007/978-3-031-32636-3_6
+
+  - title: "Fully Secure Unbounded Zero Inner Product Encryption with Short Ciphertexts and Keys"
+    authors: [Subhranil Dutta, Tapas Pal, Ratna Dutta]
+    venue: ProvSec 2021
+    venue_long: "Provable and Practical Security (ProvSec 2021)"
+    year: 2021
+    doi: 10.1007/978-3-030-90402-9_13
+
+journal:
+  - title: "Fully Collusion Resistant Traceable Identity-Based Inner Product Functional Encryption"
+    authors: [Subhranil Dutta, Tapas Pal, Amit Kumar Singh, Sourav Mukhopadhyay]
+    venue: IACR CiC 2025
+    venue_long: "IACR Communications in Cryptology"
+    year: 2025
+    doi: 10.62056/av4fe0zn4
+
+  - title: "Securing Data in the Cloud using Pairing-Free Inner Product Functional Encryption with Unbounded Vector Size"
+    authors: [Subhranil Dutta, Ratna Dutta, Sourav Mukhopadhyay]
+    venue: TCS 2025
+    venue_long: "Theoretical Computer Science"
+    year: 2025
+    doi: 10.1016/j.tcs.2025.115085
+
+  - title: "Reinforcing Privacy in Cloud Computing via Adaptively Secure Non-zero Inner Product Encryption and Anonymous Identity-Based Revocation in Unbounded Setting"
+    authors: [Subhranil Dutta, Tapas Pal, Ratna Dutta]
+    venue: TCS 2024
+    venue_long: "Theoretical Computer Science"
+    year: 2024
+    doi: 10.1016/j.tcs.2024.114502
+
+  - title: "Unbounded Predicate Inner Product Functional Encryption from Pairings"
+    authors: [Uddipana Dowerah, Subhranil Dutta, Aikaterini Mitrokotsa, Sayantan Mukherjee, Tapas Pal]
+    venue: JoC 2023
+    venue_long: "Journal of Cryptology"
+    year: 2023
+    doi: 10.1007/s00145-023-09458-2
+    eprint: 2023/483

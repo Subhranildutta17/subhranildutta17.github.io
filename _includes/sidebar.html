@@ -1,0 +1,23 @@
+{%- assign a = site.author -%}
+<aside class="side">
+  <div class="side-inner">
+    {%- if a.photo %}
+    <img class="side-photo" src="{{ a.photo | relative_url }}" alt="{{ a.photo_alt | default: a.name }}" width="132" height="133">
+    {%- endif %}
+    <p class="side-name">{{ a.name }}</p>
+    <p class="side-pos">{{ a.position }}</p>
+    <p class="side-affil">
+      {%- for af in a.affiliation %}<a href="{{ af.url }}">{{ af.name }}</a>{% unless forloop.last %}<br>{% endunless %}{% endfor %}
+    </p>
+    <p class="side-email">{{ a.email }}</p>
+    <ul class="side-links">
+      {%- for p in a.profiles %}<li><a href="{{ p.url }}">{{ p.name }}</a></li>{% endfor %}
+      {%- if a.cv and a.cv != '' %}<li><a href="{{ a.cv | relative_url }}">CV</a></li>{% endif %}
+    </ul>
+    <nav class="side-nav" aria-label="Main">
+      {%- for item in site.data.navigation %}
+      <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} class="active" aria-current="page"{% endif %}>{{ item.title }}</a>
+      {%- endfor %}
+    </nav>
+  </div>
+</aside>

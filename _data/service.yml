@@ -1,0 +1,26 @@
+# "Professional Activities" on the Research page.
+# Each top-level entry is one card; a card can hold several headed lists.
+- groups:
+    - title: Reviewer for Journals
+      items:
+        - Designs, Codes and Cryptography
+        - Cluster Computing
+        - IEEE Transactions on Information Forensics and Security
+        - IEEE Transactions on Dependable and Secure Computing
+        - IEEE Access
+        - Journal of Cryptographic Engineering
+        - IEEE Transactions on Network Science and Engineering
+        - IEEE Transactions on Computers
+        - Tsinghua Science and Technology
+        - Scientific Reports
+        - International Journal of Information Security
+
+- groups:
+    - title: Reviewer / Sub-reviewer for Conferences
+      items:
+        - Indocrypt 2021, Indocrypt 2024
+        - ACM AsiaCCS 2025, CANS 2025, PETS 2025
+    - title: PC Member for Conferences
+      items:
+        - ICSP 2020, ICSP 2024
+        - ICSP 2025, Indocrypt 2025, ACM ASIA APKC 2026
