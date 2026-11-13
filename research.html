@@ -2,7 +2,7 @@
 layout: default
 title: Research
 ---
-{%- comment -%} Content lives in _data/publications.yml, _data/talks.yml and _data/service.yml {%- endcomment -%}
+{%- comment -%} Content lives in _data/publications.yml and _data/service.yml {%- endcomment -%}
 <section id="overview">
   <h1>Research</h1>
   <div class="overview">
@@ -28,18 +28,6 @@ title: Research
   </ul>
   {%- endfor %}
 </section>
-
-{%- if site.data.talks.size > 0 %}
-<section id="talks">
-  <h2>Talks</h2>
-  <dl class="rows">
-    {%- for t in site.data.talks %}
-    <dt>{{ t.event }}</dt>
-    <dd>{{ t.title }}{% if t.slides %} (<a href="{{ t.slides | relative_url }}">slides</a>){% endif %}{% if t.video %} (<a href="{{ t.video }}">video</a>){% endif %}</dd>
-    {%- endfor %}
-  </dl>
-</section>
-{%- endif %}
 
 <section id="service">
   <h2>Professional Service</h2>
