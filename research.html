@@ -14,10 +14,19 @@ title: Research
 
 <section id="publications">
   <h2>Publications</h2>
-  <h3>Journal Articles</h3>
-  {% include pub-list.html pubs=site.data.publications.journal %}
-  <h3>Conference Papers</h3>
-  {% include pub-list.html pubs=site.data.publications.conference %}
+  {%- assign all = site.data.publications.journal | concat: site.data.publications.conference %}
+  {%- assign years = all | map: 'year' | uniq | sort | reverse %}
+  {%- for y in years %}
+  <h3 class="year">{{ y }}</h3>
+  <ul class="pubs">
+    {%- for pub in site.data.publications.journal %}{% if pub.year == y %}
+    {% include pub.html pub=pub kind="Journal" %}
+    {%- endif %}{% endfor %}
+    {%- for pub in site.data.publications.conference %}{% if pub.year == y %}
+    {% include pub.html pub=pub kind="Conference" %}
+    {%- endif %}{% endfor %}
+  </ul>
+  {%- endfor %}
 </section>
 
 {%- if site.data.talks.size > 0 %}
