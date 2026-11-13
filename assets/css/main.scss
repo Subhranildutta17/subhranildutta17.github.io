@@ -154,3 +154,7 @@ h3 { font-size: .98rem; font-weight: 700; margin: 1.4rem 0 .5rem; color: var(--m
 @media (max-width: 900px) {
   .news-list li { grid-template-columns: 5.2rem 1fr; gap: .6rem; }
 }
+
+// publications grouped by year
+.year { font-family: var(--serif); font-size: 1.25rem; font-weight: 600; color: var(--indigo); margin: 1.8rem 0 .3rem; padding-bottom: .3rem; border-bottom: 2px solid var(--indigo-soft); }
+.pub-side .kind { font-size: .8rem; color: var(--muted); }
