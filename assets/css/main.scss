@@ -10,9 +10,30 @@
   --muted: #5d6475;
   --line: #e4e7ee;
   --shadow: 0 1px 2px rgba(23, 32, 64, .06), 0 10px 30px -12px rgba(23, 32, 64, .18);
+  --on-indigo: #ffffff;          // text on a solid indigo background
+  --quote: #2b3463;              // teaching-philosophy text
   --serif: "Lora", Georgia, serif;
   --sans: "Nunito Sans", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
 }
+
+// ---------- night mode: the same variables, darker values ----------
+@mixin night {
+  --canvas: #0e1220;
+  --sheet: #171c2d;
+  --indigo: #a3b2ff;
+  --indigo-soft: #252c4a;
+  --text: #e3e6ef;
+  --muted: #a6adbd;
+  --line: #2b3148;
+  --shadow: 0 0 0 1px #232a40, 0 10px 30px -12px rgba(0, 0, 0, .75);
+  --on-indigo: #11152b;
+  --quote: #d0d7ff;
+  color-scheme: dark;
+}
+:root[data-theme="dark"] { @include night; }
+// Visitors with JavaScript off still get the dark version if their system asks for it.
+@media (prefers-color-scheme: dark) { :root:not([data-theme]) { @include night; } }
 
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -22,7 +43,7 @@ a { color: var(--indigo); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 3px; }
 a:focus-visible { outline: 2px solid var(--indigo); outline-offset: 2px; }
 .skip { position: absolute; left: -9999px; }
-.skip:focus { left: 1rem; top: .5rem; z-index: 30; background: #fff; padding: .3rem .6rem; }
+.skip:focus { left: 1rem; top: .5rem; z-index: 30; background: var(--sheet); padding: .3rem .6rem; }
 
 .shell {
   display: grid;
@@ -46,11 +67,20 @@ a:focus-visible { outline: 2px solid var(--indigo); outline-offset: 2px; }
 .side-email { margin-top: .8rem !important; font-size: .88rem; color: var(--muted); }
 .side-links { list-style: none; padding: 0; margin: 1rem 0 0; display: flex; flex-wrap: wrap; gap: .5rem; }
 .side-links a { display: inline-block; font-size: .85rem; font-weight: 700; padding: .3rem .85rem; background: var(--indigo-soft); border-radius: 8px; }
-.side-links a:hover { background: var(--indigo); color: #fff; text-decoration: none; }
+.side-links a:hover { background: var(--indigo); color: var(--on-indigo); text-decoration: none; }
 .side-nav { margin-top: 1.4rem; padding-top: 1rem; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: .3rem; font-size: .88rem; }
 .side-nav a { color: var(--muted); padding: .15rem .55rem; border-radius: 6px; }
 .side-nav a:hover { background: var(--indigo-soft); color: var(--indigo); text-decoration: none; }
-.side-nav a.active { background: var(--indigo); color: #fff; }
+.side-nav a.active { background: var(--indigo); color: var(--on-indigo); }
+
+// day / night switch, at the end of the menu row
+.theme-toggle { margin-left: auto; display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; padding: 0; color: var(--muted); background: none; border: 1px solid var(--line); border-radius: 50%; cursor: pointer; }
+.theme-toggle[hidden] { display: none; }
+.theme-toggle:hover { background: var(--indigo-soft); color: var(--indigo); }
+.theme-toggle:focus-visible { outline: 2px solid var(--indigo); outline-offset: 2px; }
+.theme-toggle svg { width: 1.1rem; height: 1.1rem; flex: none; }
+.theme-toggle .i-sun, [data-theme="dark"] .theme-toggle .i-moon { display: none; }
+[data-theme="dark"] .theme-toggle .i-sun { display: block; }
 .page-lead { color: var(--muted); margin: -.4rem 0 2rem; max-width: 65ch; }
 
 // ---------- one white page for the content ----------
@@ -91,7 +121,7 @@ h3 { font-size: .98rem; font-weight: 700; margin: 1.4rem 0 .5rem; color: var(--m
 .teach td { padding: .45rem .8rem .45rem 0; border-bottom: 1px solid var(--line); vertical-align: top; }
 .teach td:first-child { font-weight: 600; width: 40%; }
 .teach td:last-child { color: var(--muted); width: 24%; padding-right: 0; }
-.philosophy { margin: 1.6rem 0 0; padding: 1rem 1.3rem; background: var(--indigo-soft); border-radius: 10px; font-family: var(--serif); font-style: italic; font-size: 1.05rem; color: #2b3463; }
+.philosophy { margin: 1.6rem 0 0; padding: 1rem 1.3rem; background: var(--indigo-soft); border-radius: 10px; font-family: var(--serif); font-style: italic; font-size: 1.05rem; color: var(--quote); }
 
 .edu { list-style: none; padding: 0; margin: 0; }
 .edu li { padding: .55rem 0; border-top: 1px solid var(--line); }
