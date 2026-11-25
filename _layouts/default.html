@@ -4,6 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {% seo %}
+<meta name="color-scheme" content="light dark">
+<script>
+  /* Day/night: use the visitor's saved choice, otherwise their system setting.
+     Runs before the page is drawn, so there is no white flash at night. */
+  (function () {
+    var t;
+    try { t = localStorage.getItem('theme'); } catch (e) {}
+    if (t !== 'light' && t !== 'dark') {
+      t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
 <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,5 +32,34 @@
   <footer class="foot">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}</footer>
   </main>
 </div>
+<script>
+  (function () {
+    var root = document.documentElement;
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    function saved() { try { return localStorage.getItem('theme'); } catch (e) { return null; } }
+    function show() {
+      var dark = root.getAttribute('data-theme') === 'dark';
+      btn.title = dark ? 'Switch to day mode' : 'Switch to night mode';
+      btn.setAttribute('aria-label', btn.title);
+    }
+    btn.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      show();
+    });
+    // Until the visitor clicks the switch, follow changes in their system setting.
+    var mq = window.matchMedia && matchMedia('(prefers-color-scheme: dark)');
+    if (mq && mq.addEventListener) {
+      mq.addEventListener('change', function (e) {
+        var s = saved();
+        if (s !== 'light' && s !== 'dark') { root.setAttribute('data-theme', e.matches ? 'dark' : 'light'); show(); }
+      });
+    }
+    show();
+    btn.hidden = false;
+  })();
+</script>
 </body>
 </html>
