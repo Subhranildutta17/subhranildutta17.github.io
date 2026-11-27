@@ -1,5 +1,8 @@
 # "Latest News" box on the home page. Newest first.
 # Links use Markdown: [text](https://...)
+- date: Nov 2026
+  text: Accepted a paper on Predicate FE on Ring LWE at [ACNS 2027](https://acns2027.isg.rhul.ac.uk).
+
 - date: Feb 2026
   text: Accepted a paper on Quadratic FE at [PKC 2026](https://pkc.iacr.org/2026/).
 
