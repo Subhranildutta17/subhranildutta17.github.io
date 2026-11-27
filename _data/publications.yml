@@ -12,6 +12,12 @@
 #   slides:      /assets/slides/x.pdf (optional)
 
 conference:
+  - title: "Predicate Inner Product Functional Encryption from Ring Learning with Errors"
+    authors: [Uddipana Dowerah, Subhranil Dutta, Shahid Raza]
+    venue: ACNS 2027
+    venue_long: "Applied Cryptography and Network Security (ACNS 2027)"
+    year: 2027
+
   - title: "Simulation Secure Quadratic Functional Encryption for Inner-Product and Quadratic Predicates"
     authors: [Wilson Tsuata, Subhranil Dutta, Aikaterini Mitrokotsa]
     venue: PKC 2026
